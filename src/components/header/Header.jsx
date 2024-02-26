@@ -97,7 +97,6 @@ function Header() {
           <div className="lg:pl-8 sm:pl-3 ">
             <Link to="/useradmin" className="lg:block hidden">
               <img src="/Images/navbar/Logo.png" alt="logo" />
-              and
             </Link>
             <Link to="/useradmin" className="lg:hidden block">
               <img src="/Images/logo-sm.svg" alt="logo" className="h-[30px]" />
