@@ -11,7 +11,7 @@ import PreparationPhase from "./components/projectPhase/preparation/PreparationP
 import InitialPhase from "./components/projectPhase/initialPhase/InitialPhase";
 import Execution from "./components/projectPhase/execution/Execution";
 import Close from "./components/projectPhase/clostPhase/Close";
-import ProjectManagement from "./components/projectManage/projectManagement";
+import ProjectManagement from "../src/components/projectManage/ProjectManagement";
 import SingleProject from "./components/projectManage/NewProject";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./Languages/i18n";
