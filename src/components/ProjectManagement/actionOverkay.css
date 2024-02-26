@@ -1,0 +1,37 @@
+.action-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: auto; 
+
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent grey background */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 99999999;
+    height: 100%;
+    opacity: 1; /* Initially hidden */
+  transition: opacity 1s ease;
+  }
+  .action-overlay.show {
+    opacity: 1; /* Show the modal when the 'show' class is added */
+  }
+.content{
+    height: 100%;
+    overflow-y: auto; 
+    background-color: white;
+    z-index: 100000;
+    border-top-left-radius: 29px;
+    border-bottom-left-radius: 29px;
+    animation: slideIn 1s forwards; /* Slide in animation */
+    transform: translateX(100%);
+}
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
