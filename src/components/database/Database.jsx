@@ -507,8 +507,9 @@ function Database() {
   const [duration, setDuration] = useState("Duration");
   const [complexity, setComplexity] = useState("Complexity");
   const [category, setCategory] = useState("Category");
-  const [cost, setCost] = useState("Cost");
-  const [date, setDate] = useState("Date");
+  // const [cost, setCost] = useState("Cost");
+  // const [date, setDate] = useState("Date");
+  const [select, setSelect] = useState("Select");
 
   const onDurationChange = (event) => {
     setDuration(event.target.value);
@@ -583,23 +584,23 @@ function Database() {
             <FormControl className="app-dropdown">
               <Select
                 variant="outlined"
-                value={cost}
+                value={select}
                 sx={{
                   borderRadius: "50px",
                   height: "40px",
                 }}
               >
-                <MenuItem disabled value="Cost">
-                  {t("cost")}
+                <MenuItem disabled value="Select">
+                  {t("select")}
                 </MenuItem>
-                <MenuItem>1,00,000</MenuItem>
-                <MenuItem>5,00,000</MenuItem>
-                <MenuItem>10,00,000</MenuItem>
+                <MenuItem>Date</MenuItem>
+                <MenuItem>Cost</MenuItem>
+               
               </Select>
             </FormControl>{" "}
           </div>
 
-          <div className="mr-4">
+          {/* <div className="mr-4">
             <FormControl className="app-dropdown">
               <Select
                 variant="outlined"
@@ -617,7 +618,7 @@ function Database() {
                 <MenuItem>3 Jan</MenuItem>
               </Select>
             </FormControl>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-row borderCustom md:mt-0 mt-4 h-8 rounded-3xl px-4 mr-8  items-center bg-white">
