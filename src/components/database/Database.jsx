@@ -8,6 +8,8 @@ import { CiSearch } from "react-icons/ci";
 import { styled } from "@mui/system";
 import { FormControl, MenuItem, Select } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import CustomDropDown from "../CustomDropDown";
+import { dropdownList } from "../../context/DropDownData";
 
 // import MenuItem from '@mui/material/MenuItem';
 // import Select from '@mui/material/Select';
@@ -507,118 +509,78 @@ function Database() {
   const [duration, setDuration] = useState("Duration");
   const [complexity, setComplexity] = useState("Complexity");
   const [category, setCategory] = useState("Category");
-  // const [cost, setCost] = useState("Cost");
-  // const [date, setDate] = useState("Date");
-  const [select, setSelect] = useState("Select");
+  const [cost, setCost] = useState("Cost");
+  const [date, setDate] = useState("Date");
+  const [filter, setFilter] = useState("Short by date");
+  const [filterCost, setFilterCost] = useState("Short by cost");
 
   const onDurationChange = (event) => {
     setDuration(event.target.value);
     event.target.classList.remove("border", "border-gray-300");
   };
 
+  const getDropDownValue = (type) => {
+    switch (type) {
+      case "Duration":
+        return duration;
+      case "Complexity":
+        return complexity;
+      case "Cost":
+        return cost;
+      case "Short by cost":
+        return filterCost;
+      case "Date":
+        return date;
+      case "Category":
+        return category;
+      case "Short by date":
+        return filter;
+    }
+  };
+  const setDropDownValue = (type, value) => {
+    switch (type) {
+      case "Duration":
+        setDuration(value);
+
+        break;
+      case "Complexity":
+        setComplexity(value);
+        break;
+      case "Cost":
+        setCost(value);
+        break;
+      case "Short by cost":
+        setFilterCost(value);
+        break;
+      case "Date":
+        setDate(value);
+        break;
+      case "Category":
+        setCategory(value);
+        break;
+      case "Short by date":
+        setFilter(value);
+        break;
+    }
+  };
+
   return (
     <div className="background w-full text-xs px-8 pl-8 py-14">
       <div className="flex flex-row w-full flex-wrap justify-between pt-8">
         <div className="flex flex-row flex-wrap">
-          <div className="mr-4 lg:mb-0 mb-4">
-            <FormControl className="app-dropdown">
-              <Select
-                variant="outlined"
-                value={duration}
-                sx={{
-                  borderRadius: "50px",
-                  height: "40px",
-                }}
-              >
-                <MenuItem disabled value="Duration">
-                  {t("duration")}
-                </MenuItem>
-                <MenuItem>5 minutes</MenuItem>
-                <MenuItem>30 minutes</MenuItem>
-                <MenuItem>60 minutes</MenuItem>
-              </Select>
-            </FormControl>{" "}
-          </div>
-
-          <div className="mr-4">
-            <FormControl className="app-dropdown">
-              <Select
-                variant="outlined"
-                value={complexity}
-                sx={{
-                  borderRadius: "50px",
-                  height: "40px",
-                }}
-              >
-                <MenuItem disabled value="Complexity">
-                  {t("complexity")}
-                </MenuItem>
-                <MenuItem>Low</MenuItem>
-                <MenuItem>Medium</MenuItem>
-                <MenuItem>Hard</MenuItem>
-              </Select>
-            </FormControl>{" "}
-          </div>
-
-          <div className="mr-4">
-            <FormControl className="app-dropdown">
-              <Select
-                variant="outlined"
-                value={category}
-                sx={{
-                  borderRadius: "50px",
-                  height: "40px",
-                }}
-              >
-                <MenuItem disabled value="Category">
-                  {t("category")}
-                </MenuItem>
-                <MenuItem>Jaipur</MenuItem>
-                <MenuItem>Banglore</MenuItem>
-                <MenuItem>Noida</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-
-          <div className="mr-4">
-            <FormControl className="app-dropdown">
-              <Select
-                variant="outlined"
-                value={select}
-                sx={{
-                  borderRadius: "50px",
-                  height: "40px",
-                }}
-              >
-                <MenuItem disabled value="Select">
-                  {t("select")}
-                </MenuItem>
-                <MenuItem>Date</MenuItem>
-                <MenuItem>Cost</MenuItem>
-               
-              </Select>
-            </FormControl>{" "}
-          </div>
-
-          {/* <div className="mr-4">
-            <FormControl className="app-dropdown">
-              <Select
-                variant="outlined"
-                value={date}
-                sx={{
-                  borderRadius: "50px",
-                  height: "40px",
-                }}
-              >
-                <MenuItem disabled value="Date">
-                  {t("date")}
-                </MenuItem>
-                <MenuItem>1 Jan </MenuItem>
-                <MenuItem>2 Jan</MenuItem>
-                <MenuItem>3 Jan</MenuItem>
-              </Select>
-            </FormControl>
-          </div> */}
+          {dropdownList &&
+            dropdownList.map((item, index) => {
+              return (
+                <CustomDropDown
+                  type={item.type}
+                  value={getDropDownValue(item.type)}
+                  menuItems={item.items}
+                  onSelect={(it, type) => {
+                    setDropDownValue(type, it);
+                  }}
+                />
+              );
+            })}
         </div>
 
         <div className="flex flex-row borderCustom md:mt-0 mt-4 h-8 rounded-3xl px-4 mr-8  items-center bg-white">
