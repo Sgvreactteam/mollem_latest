@@ -47,7 +47,7 @@ function BillofQuantities() {
           </div>
         </div>
 
-        <div className="max-w-7xl grid lg:grid-cols-2 grid-cols-1 gap-2 mt-14">
+        <div className="max-w-7xl grid lg:grid-cols-2 grid-cols-1 gap-2 mt-14 mx-auto">
           <div>
             <h2 className=" text-2xl font-medium">{t("technicalAnalysis")}</h2>
             <table className="w-full mt-2">
