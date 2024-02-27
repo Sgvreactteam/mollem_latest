@@ -32,7 +32,7 @@ export const dropdownList = [
         ]
     },
     {
-        type: "Short by cost",
+        type: "Sort by cost",
         items:[
             "Ascending ",
             "Descending",
@@ -47,7 +47,7 @@ export const dropdownList = [
         ]
     },
     {
-        type: "Short by date",
+        type: "Sort by date",
         items:[
             "Ascending ",
             "Descending",

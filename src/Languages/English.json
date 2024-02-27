@@ -187,8 +187,8 @@
 
   "addNewTask": "Add New Task",
   "filter": "Filter by date",
-  "short by cost":"Short by cost",
-  "short by date":"Short by date",
+  "sort by cost":"Sort by cost",
+  "sort by date":"Sort by date",
   "hide": "Hide",
   "customize": "Customize",
   "dept": "Department",

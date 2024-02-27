@@ -527,13 +527,13 @@ function Database() {
         return complexity;
       case "Cost":
         return cost;
-      case "Short by cost":
+      case "Sort by cost":
         return filterCost;
       case "Date":
         return date;
       case "Category":
         return category;
-      case "Short by date":
+      case "Sort by date":
         return filter;
     }
   };
@@ -541,7 +541,6 @@ function Database() {
     switch (type) {
       case "Duration":
         setDuration(value);
-
         break;
       case "Complexity":
         setComplexity(value);
@@ -549,7 +548,7 @@ function Database() {
       case "Cost":
         setCost(value);
         break;
-      case "Short by cost":
+      case "Sort by cost":
         setFilterCost(value);
         break;
       case "Date":
@@ -558,7 +557,7 @@ function Database() {
       case "Category":
         setCategory(value);
         break;
-      case "Short by date":
+      case "Sort by date":
         setFilter(value);
         break;
     }
