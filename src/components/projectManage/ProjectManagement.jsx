@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-// import "../preparation/evaluation.css";
 import img1 from "/Images/img/img1.png";
 import img2 from "/Images/img/img2.png";
 import img3 from "/Images/img/img3.png";
@@ -12,7 +11,7 @@ import { WiTime4 } from "react-icons/wi";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 
 import { Link } from "react-router-dom";
-
+import './ProjMan.css'
 import { useTranslation } from "react-i18next";
 import { FormControl, MenuItem, Select } from "@mui/material";
 import { CiSearch } from "react-icons/ci";
@@ -174,7 +173,7 @@ function ProjectManagement() {
                   <span style={{ color: "#018B00" }}>{item.progress}%</span>{" "}
                   <span style={{ color: "#808080" }}>{t("completed")}</span>
                 </p>
-                <progress className="sm:mt-2 mt-1 " value={0.25}></progress>
+                <progress className="sm:mt-2 mt-1" value={0.25}></progress>
                 <div className="flex justify-end  sm:mt-4 mt-2">
                   <button className="bg-white focus:bg-primary focus:text-white flex items-center border rounded-full px-4 py-1 font-medium">
                     {t("viewProj")} <MdOutlineArrowRightAlt className="ms-2" />

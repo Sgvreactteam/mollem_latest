@@ -1,7 +1,5 @@
 import React from "react";
-import "./evaluation.css";
 import { useLanguage } from "../../../context/LanguageContext";
-import { TbLambda } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 function BillofQuantities() {
   const { language, toggleLanguage } = useLanguage();

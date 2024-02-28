@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./prep.css";
 import BillofQuantities from "./BillofQuantities";
 import Evaluation from "./Evaluation";
 import CashFlow from "./CashFlow";

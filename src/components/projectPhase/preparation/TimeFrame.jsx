@@ -1,10 +1,9 @@
 import React from "react";
-import "./evaluation.css";
+
 import { useLanguage } from "../../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
 function TimeFrame() {
   const { t } = useTranslation();
-  const { language, toggleLanguage } = useLanguage();
   return (
     <div className="items-center flex flex-col bg-[#F2F6FE] h-screen">
       <p className="text-xl font-normal mt-8  text-[#808080]">
