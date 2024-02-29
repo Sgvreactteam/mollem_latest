@@ -36,6 +36,7 @@
   "currentProjMan": "المشاريع الحالية",
   "database": "قاعدة البيانات",
   "projMan": "ادارة مشروع",
+  "projManr": "مدير المشروع",
 
   "duration": "مدة",
   "projectSize": "حجم المشروع",
@@ -200,5 +201,11 @@
   "analysis": "تحليل",
 
   "cumulative": "تراكمي",
-  "criType": "نوع المعايير"
+  "criType": "نوع المعايير",
+  "currentProjdash": "لوحة تحكم المشاريع الحالية",
+  "topiwalaPlant": "Topiwala Plant",
+  "unitPri": "سعر الوحدة",
+  "prod": "منتج",
+  "itemTy1": "نوع العنصر 1",
+  "itemTy2": "نوع العنصر 2"
 }

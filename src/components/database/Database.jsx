@@ -8,8 +8,8 @@ import { CiSearch } from "react-icons/ci";
 import { styled } from "@mui/system";
 import { FormControl, MenuItem, Select } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import CustomDropDown from "../CustomDropDown";
-import { dropdownList } from "../../context/DropDownData";
+import CustomDropDown from "./CustomDropDown";
+import { dropdownList } from "./DropDownData";
 
 // import MenuItem from '@mui/material/MenuItem';
 // import Select from '@mui/material/Select';

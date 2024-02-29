@@ -1,12 +1,12 @@
 import Login from "./components/login/Login";
 import Signup from "./components/signUp/Signup";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import UserAdmin from "./components/userAdmin/UserAdmin";
 import Header from "./components/header/Header";
 import Topiwala from "./components/topiwala/Topiwala";
-import Regulation from "./components/regulation/Regulation";
+import Regulation from "./components/KnowledgeHub/regulation/Regulation";
 import Database from "./components/database/Database";
-import Templates from "./components/template/Templates";
+import Templates from "./components/KnowledgeHub/template/Templates";
 import PreparationPhase from "./components/projectPhase/preparation/PreparationPhase";
 import InitialPhase from "./components/projectPhase/initialPhase/InitialPhase";
 import Execution from "./components/projectPhase/execution/Execution";
@@ -15,11 +15,13 @@ import ProjectManagement from "../src/components/projectManage/ProjectManagement
 import SingleProject from "./components/projectManage/NewProject";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./Languages/i18n";
-import EngineeringPractices from "./components/EngineeringPractices/EngineeringPractices";
-import HeaderProjectM from "./components/ProjectManagement/HeaderProjectM";
-import UserTask from "./components/ProjectManagement/UserTask";
-import TaskCreate from "./components/ProjectManagement/TaskCreate";
-import Task from "./components/ProjectManagement/Task";
+import EngineeringPractices from "./components/KnowledgeHub/EngineeringPractices/EngineeringPractices";
+import HeaderProjectM from "./components/ProjectManagement/Header-ProjectManagement/HeaderProjectM";
+import UserTask from "./components/ProjectManagement/UserTask/UserTask";
+import TaskCreate from "./components/ProjectManagement/TaskCreate/TaskCreate";
+import Task from "./components/ProjectManagement/Task/Task";
+import KnowledgeHub from "./components/KnowledgeHub/KnowledgeHub";
+
 function App() {
   const location = useLocation();
   return (
@@ -39,10 +41,15 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/useradmin" element={<UserAdmin />} />
           <Route path="/topiwala" element={<Topiwala />} />
-          <Route path="/reg" element={<Regulation />} />
-          <Route path="/ep" element={<EngineeringPractices />} />
+          <Route path="/knowledgeHub/reg" element={<KnowledgeHub />} />
+
+
+          {/* <Route path="/knowledgeHub/reg" element={<Regulation />} /> */}
+          <Route path="/knowledgeHub/ep" element={<KnowledgeHub />} />
+          <Route path="/knowledgeHub/template" element={<KnowledgeHub />} />
+
+          
           <Route path="/data" element={<Database />} />
-          <Route path="/template" element={<Templates />} />
           <Route path="/preparation" element={<PreparationPhase />} />
           <Route path="/initiatingphase" element={<InitialPhase />} />
           <Route path="/execution" element={<Execution />} />
@@ -53,6 +60,7 @@ function App() {
           <Route path="/taskCreate" element={<TaskCreate />} />
           <Route path="/task" element={<Task />} />
           <Route path="/currentProject" element={<ProjectManagement />} />
+          <Route path="/topiwalaPlant" element={<Topiwala />} />
         </Routes>
       </I18nextProvider>
     </div>

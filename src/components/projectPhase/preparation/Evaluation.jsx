@@ -58,22 +58,27 @@ function Evaluation() {
       <table className="mt-2 rounded-lg">
         <thead>
           <tr>
-            <th className="border border-[#828282] bg-[#dfe6fc] p-2">{t("cumulative")}</th>
-            <th className="border border-[#828282] bg-[#dfe6fc] p-2">{t("weight")}</th>
-            <th className="border border-[#828282] bg-[#dfe6fc] p-2">{t("description")}</th>
-            <th className="border border-[#828282] bg-[#dfe6fc] p-2">{t("criType")}</th>
+            
             <th className="border border-[#828282] bg-[#dfe6fc] p-2 rounded-tr-md">{t("#")}</th>
+            <th className="border border-[#828282] bg-[#dfe6fc] p-2">{t("criType")}</th>
+            <th className="border border-[#828282] bg-[#dfe6fc] p-2">{t("description")}</th>
+            <th className="border border-[#828282] bg-[#dfe6fc] p-2">{t("weight")}</th>
+            <th className="border border-[#828282] bg-[#dfe6fc] p-2">{t("cumulative")}</th>
           </tr>
         </thead>
         <tbody>
           {evalCri.map((item) => (
             <tr className="bg-white">
-              <td className="border border-[#828282] p-2">{item.cumulative}</td>
-              <td className="border border-[#828282] p-2">{item.weight} </td>
-              <td className="border border-[#828282] p-2">{item.desc} </td>
-              <td className="border border-[#828282] p-2">{item.criType}</td>
+              
+              
+              
+              
 
               <td className="border border-[#828282] p-2">{item.some}</td>
+              <td className="border border-[#828282] p-2">{item.criType}</td>
+              <td className="border border-[#828282] p-2">{item.desc} </td>
+              <td className="border border-[#828282] p-2">{item.weight} </td>
+              <td className="border border-[#828282] p-2">{item.cumulative}</td>
             </tr>
           ))}
         </tbody>

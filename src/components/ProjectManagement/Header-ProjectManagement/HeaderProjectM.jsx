@@ -13,7 +13,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import logo from '../../../public/Images/navbar/Logo.png'
+import logo from '/Images/navbar/Logo.png'
 import { useTranslation } from 'react-i18next';
 function HeaderProjectM() {
   const { i18n } = useTranslation();

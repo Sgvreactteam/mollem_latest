@@ -36,6 +36,7 @@
   "currentProjMan": "Current Projects",
   "database": "Database",
   "projMan": "Project management",
+  "projManr": "Project Manager",
 
   "duration": "Duration",
   "projectSize": "Project Size",
@@ -200,5 +201,11 @@
   "analysis": "Analysis",
 
   "cumulative": "Cumulative",
-  "criType": "Criteria Type"
+  "criType": "Criteria Type",
+  "currentProjdash": "Current Projects Dashboard",
+  "topiwalaPlant": "Topiwala Plant",
+  "unitPri": "Unit Price",
+  "prod": "Product",
+  "itemTy1": "Item Type 1",
+  "itemTy2": "Item Type 2"
 }

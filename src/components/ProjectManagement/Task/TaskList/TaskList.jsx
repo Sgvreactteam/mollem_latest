@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import { useTranslation } from 'react-i18next';
-import HideContentOverlay from './HideContentOverlay';
+import HideContentOverlay from './HideContentOverlay'
 import { Pagination } from "@mui/material";
 import { styled } from "@mui/system";
 import usePagination from "./Pagination";
