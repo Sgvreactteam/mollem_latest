@@ -31,7 +31,7 @@ function UserAdmin() {
       </div>
 
       <div className="flex sm:flex-row flex-col gap-4 md:gap-4 h-[calc(100%-6rem)] justify-center items-center sm:pt-0 mt-8 sm-pb-0 pb-4">
-        <Link to={`/reg`}>
+        <Link to={`/knowledgeHub/reg`}>
           <div className="sm:max-w-sm w-full mx-auto bg-white rounded-md shadow-md flex flex-col justify-center items-center">
             <img
               className=" object-cover h-20 w-20"

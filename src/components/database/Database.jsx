@@ -511,8 +511,8 @@ function Database() {
   const [category, setCategory] = useState("Category");
   const [cost, setCost] = useState("Cost");
   const [date, setDate] = useState("Date");
-  const [filter, setFilter] = useState("Short by date");
-  const [filterCost, setFilterCost] = useState("Short by cost");
+  const [filter, setFilter] = useState("Sort by Cost/date");
+ 
 
   const onDurationChange = (event) => {
     setDuration(event.target.value);
@@ -527,13 +527,11 @@ function Database() {
         return complexity;
       case "Cost":
         return cost;
-      case "Sort by cost":
-        return filterCost;
       case "Date":
         return date;
       case "Category":
         return category;
-      case "Sort by date":
+      case "Sort by Cost/date":
         return filter;
     }
   };
@@ -548,16 +546,13 @@ function Database() {
       case "Cost":
         setCost(value);
         break;
-      case "Sort by cost":
-        setFilterCost(value);
-        break;
       case "Date":
         setDate(value);
         break;
       case "Category":
         setCategory(value);
         break;
-      case "Sort by date":
+      case "Sort by Cost/date":
         setFilter(value);
         break;
     }
