@@ -4,9 +4,9 @@ import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import UserAdmin from "./components/userAdmin/UserAdmin";
 import Header from "./components/header/Header";
 import Topiwala from "./components/topiwala/Topiwala";
-import Regulation from "./components/KnowledgeHub/regulation/Regulation";
+
 import Database from "./components/database/Database";
-import Templates from "./components/KnowledgeHub/template/Templates";
+
 import PreparationPhase from "./components/projectPhase/preparation/PreparationPhase";
 import InitialPhase from "./components/projectPhase/initialPhase/InitialPhase";
 import Execution from "./components/projectPhase/execution/Execution";
@@ -15,8 +15,7 @@ import ProjectManagement from "../src/components/projectManage/ProjectManagement
 import SingleProject from "./components/projectManage/NewProject";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./Languages/i18n";
-import EngineeringPractices from "./components/KnowledgeHub/EngineeringPractices/EngineeringPractices";
-import HeaderProjectM from "./components/ProjectManagement/Header-ProjectManagement/HeaderProjectM";
+
 import UserTask from "./components/ProjectManagement/UserTask/UserTask";
 import TaskCreate from "./components/ProjectManagement/TaskCreate/TaskCreate";
 import Task from "./components/ProjectManagement/Task/Task";
@@ -27,14 +26,9 @@ function App() {
   return (
     <div>
       <I18nextProvider i18n={i18n}>
-        {/* {istaskPage ? (<HeaderProjectM /> ) : (<Header />) } */}
-        {location.pathname === "/task" ||
-        location.pathname === "/taskCreate" ||
-        location.pathname === "/userTask" ? (
-          <HeaderProjectM />
-        ) : (
+        
           <Header />
-        )}
+
         {/* <HeaderProjectM /> */}
         <Routes>
           <Route index element={<Signup />} />

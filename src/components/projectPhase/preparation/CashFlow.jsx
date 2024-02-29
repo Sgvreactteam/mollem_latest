@@ -47,13 +47,13 @@ function CashFlow() {
         </tbody>
       </table>
       <div className="flex flex-row md:gap-10 gap-3 mt-16">
-        <Button type="blueButton">
+        <Button type="regular">
           {t("print")}
         </Button>
-        <Button type="blueButton">
+        <Button type="regular">
           {t("export")}
         </Button>
-        <Button type="blueButton" className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+        <Button type="regular" className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
           {t("saveLater")}
         </Button>
         <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">

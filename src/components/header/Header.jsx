@@ -19,6 +19,7 @@ function Header() {
   const [hamburgerSize, setHamburgerSize] = useState(30); // Initial size
   const { i18n } = useTranslation();
   const [checked, setChecked] = useState(i18n.language === "ar");
+  
 
   const location = useLocation();
   const admin =
@@ -124,6 +125,7 @@ export default Header;
 const NestedDrawer = () => {
   const [isProjectOpen, setProjectOpen] = useState(false);
   const [isHubOpen, setHubOpen] = useState(false);
+  const [isTaskOpen, setIsTaskOpen] = useState(false)
   const { t } = useTranslation();
 
   const toggleProject = () => {
@@ -135,11 +137,22 @@ const NestedDrawer = () => {
     setHubOpen(!isHubOpen);
     setProjectOpen(false);
   };
+  const handleTask = () => {
+    setIsTaskOpen(!isTaskOpen);
+  }
+
+
   return (
     <div>
       <div>
-        <ListItemButton>
-          <div className="flex items-center justify-end w-full">
+       
+
+      
+
+         
+        <ListItemButton onClick={handleTask}>
+          <div className="flex items-center justify-between w-full">
+          {isTaskOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
             <Link to="/task">
               <div className="flex gap-3">
                 <ListItemText primary={t("taskManagement")} />
@@ -162,6 +175,27 @@ const NestedDrawer = () => {
             </Link>
           </div>
         </ListItemButton>
+        {isTaskOpen && (
+          <div className="">
+            <Link to="/task">
+              <ListItemButton className=" !text-end !pr-10">
+                <ListItemText primary={t("task")} />
+              </ListItemButton>
+            </Link>
+
+            <Link to="/taskCreate">
+              <ListItemButton className=" !text-end !pr-10">
+                <ListItemText primary={t("taskCreate")} />
+              </ListItemButton>
+            </Link>
+            <Link to="/userTask">
+              <ListItemButton className=" !text-end !pr-10">
+                <ListItemText primary={t("userTask")} />
+              </ListItemButton>
+            </Link>
+            
+          </div>
+        )}
         <ListItemButton onClick={toggleProject}>
           <div className="flex items-center justify-between w-full">
             {isProjectOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}

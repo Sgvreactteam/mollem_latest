@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from "react-i18next";
+import { Dropdown } from 'flowbite-react';
 
 const OnAnalysisTable = () => {
   const { t } = useTranslation();
+  const [value, setValue] = useState("20 SAR")
+  const handleDropdown = (value) => {
+    setValue(value)
+  }
   return (
     <div className="bg-white p-3">
       <table className="mt-2 rounded-lg">
@@ -57,11 +62,26 @@ const OnAnalysisTable = () => {
                   <td className="border border-[#828282] p-2">-</td>
                   <td className="border border-[#828282] p-2">-</td>
                   <td className="border border-[#828282] p-2">-</td>
-                  <td className="border border-[#828282] bg-[#e9e9e9] p-2">20 SAR</td>
+                  <td className="border border-[#828282] bg-[#e9e9e9] p-2">
+                    <Dropdown label={<span style={{ color: 'black'  }}>20 SAR</span>} dismissOnClick={false}>
+                      <Dropdown.Item>Dashboard</Dropdown.Item>
+                      <Dropdown.Item>Settings</Dropdown.Item>
+                      <Dropdown.Item>Earnings</Dropdown.Item>
+                      <Dropdown.Item>Sign out</Dropdown.Item>
+                    </Dropdown>
+                  </td>
                   <td className="border border-[#828282] p-2">5</td>
-                  <td className="border border-[#828282] bg-[#e9e9e9] p-2">500</td>
+                  <td className="border border-[#828282] bg-[#e9e9e9] p-2">
+                    <Dropdown label={<span style={{ color: 'black'  }}>500</span>} dismissOnClick={false}>
+                      <Dropdown.Item>Dashboard</Dropdown.Item>
+                      <Dropdown.Item>Settings</Dropdown.Item>
+                      <Dropdown.Item>Earnings</Dropdown.Item>
+                      <Dropdown.Item>Sign out</Dropdown.Item>
+                    </Dropdown>
+                    </td>
                   <td className="border border-[#828282] p-2">-</td>
-                  <td className="border border-[#828282] bg-[#e9e9e9] p-2">ABC OILone</td>
+                  <td className="border border-[#828282] bg-[#e9e9e9] p-2">ABC OILone
+                  </td>
                   <td className="border border-[#828282] bg-[#e9e9e9] p-2">ABC OILone</td>
                   <td className="border border-[#828282] bg-[#e9e9e9] p-2">ABC OILone</td>
                   <td className="border border-[#828282] bg-[#e9e9e9] p-2">ABC OILone</td>
