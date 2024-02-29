@@ -39,7 +39,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/useradmin" element={<UserAdmin />} />
           <Route path="/topiwala" element={<Topiwala />} />
-          <Route path="/reg" element={<Regulation />} />
+          <Route path="/reg" element={<Regulation />} >
+            
+          </Route>
           <Route path="/ep" element={<EngineeringPractices />} />
           <Route path="/data" element={<Database />} />
           <Route path="/template" element={<Templates />} />

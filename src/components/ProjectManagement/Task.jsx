@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import TaskList from './TaskList';
 import DashBoard from '../task/Dashboard'
+import TimeLine from '../task/TimeLine';
 function Task({checkedA}) {
 
     const { t } = useTranslation();
@@ -59,6 +60,8 @@ function Task({checkedA}) {
         </div>
         {taskList && <TaskList/>}
         {dashboard && <DashBoard/>}
+        {timeline && <TimeLine />}
+
     </div>
   )
 }

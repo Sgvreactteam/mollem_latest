@@ -17,6 +17,7 @@
     "@syncfusion/ej2-react-gantt": "^24.2.3",
     "@testing-library/user-event": "^14.5.2",
     "chart.js": "^4.4.1",
+    "dhtmlx-gantt": "^8.0.6",
     "formik": "^2.4.5",
     "frappe-gantt": "^0.6.1",
     "i18next": "^23.8.1",
