@@ -31,13 +31,7 @@ export const dropdownList = [
             "10M"
         ]
     },
-    {
-        type: "Sort by cost",
-        items:[
-            "Ascending ",
-            "Descending",
-        ]
-    },
+    
     {
         type: "Date",
         items:[
@@ -47,10 +41,12 @@ export const dropdownList = [
         ]
     },
     {
-        type: "Sort by date",
+        type: "Sort by Cost/date",
         items:[
-            "Ascending ",
-            "Descending",
+            "Sort cost by Ascending ",
+            "Sort cost by Descending",
+            "Sort date by Ascending ",
+            "Sort date by Descending",
         ]
     },
     
