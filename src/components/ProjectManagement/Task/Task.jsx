@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
-import TaskList from './TaskList';
-import DashBoard from '../task/Dashboard'
-import TimeLine from '../task/TimeLine';
+import TaskList from './TaskList/TaskList';
+import DashBoard from './Dashboard/Dashboard'
+import TimeLine from './Timeline/TimeLine';
 function Task({checkedA}) {
 
     const { t } = useTranslation();
@@ -60,8 +60,7 @@ function Task({checkedA}) {
         </div>
         {taskList && <TaskList/>}
         {dashboard && <DashBoard/>}
-        {timeline && <TimeLine />}
-
+        {timeline && <TimeLine/>}
     </div>
   )
 }

@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "../../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
+import OnAnalysisTable from "./OnAnalysisTable";
 function BillofQuantities() {
   const { language, toggleLanguage } = useLanguage();
   const { t } = useTranslation();
+  const [analysis, setAnalysis] = useState(false);
+  const handleAnalysis = () => {
+    setAnalysis(!analysis)
+  }
   return (
     <div className="mt-6  h-full ">
-      <div className="bg-white p-3">
+      {analysis===false ? (<div className="bg-white p-3">
         <div className=" max-w-7xl mx-auto rounded  flex justify-center">
           <div>
             <h3 className="text-2xl font-medium inline ">
@@ -113,11 +118,13 @@ function BillofQuantities() {
             </table>
           </div>
         </div>
-      </div>
+      </div>): (
+        <OnAnalysisTable />
+      )}
 
       <div className="flex justify-center">
         <div className="flex flex-row gap-5 mt-16">
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          <button onClick={handleAnalysis} className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
             {t("analysis")}
           </button>
           <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">

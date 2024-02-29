@@ -213,34 +213,36 @@ const NestedDrawer = () => {
             {isHubOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
 
             <div className="flex gap-3">
+              <Link to="/knowledgeHub/reg" className=" items-center flex justify-between">
               <ListItemText primary={t("knowledgeHub")} />
 
-              <ListItemIcon className="flex items-center justify-center">
+              <ListItemIcon className=" flex justify-end mr-5">
                 <img
                   src="/Images/sidebar/Vector.png"
                   alt="project-image"
                   className="w-4 h-4"
                 />
               </ListItemIcon>
+              </Link>
             </div>
           </div>
         </ListItemButton>
 
         {isHubOpen && (
           <div className="">
-            <Link to="/reg">
+            <Link to="/knowledgeHub/reg">
               <ListItemButton className=" !text-end !pr-10">
                 <ListItemText primary={t("regulations")} />
               </ListItemButton>
             </Link>
 
-            <Link to="/template">
+            <Link to="/knowledgeHub/template">
               <ListItemButton className=" !text-end !pr-10">
                 <ListItemText primary={t("templates")} />
               </ListItemButton>
             </Link>
 
-            <Link to="/ep">
+            <Link to="/knowledgeHub/ep">
               <ListItemButton className=" !text-end !pr-10">
                 <ListItemText primary={t("engineeringPractices")} />
               </ListItemButton>
@@ -271,7 +273,7 @@ const NestedDrawer = () => {
         <div className="flex items-center justify-end w-full">
           <Link to="/ProjectManagement">
             <div className="flex gap-3">
-              <ListItemText primary={t("currentProjMan")} />
+              <ListItemText className=" text-right" primary={t("currentProjdash")} />
 
               <ListItemIcon className="flex items-center justify-center">
                 <img
@@ -330,6 +332,24 @@ const NestedDrawer = () => {
               />
             </ListItemIcon>
           </div>
+        </div>
+      </ListItemButton>
+
+      <ListItemButton>
+        <div className="flex items-center justify-end w-full">
+          <Link to="/topiwalaPlant">
+            <div className="flex gap-3">
+              <ListItemText className=" text-right" primary={t("topiwalaPlant")} />
+
+              <ListItemIcon className="flex items-center justify-center">
+                <img
+                  src="/Images/sidebar/project.svg"
+                  alt="project-image"
+                  className="w-4 h-4"
+                />
+              </ListItemIcon>
+            </div>
+          </Link>
         </div>
       </ListItemButton>
     </div>

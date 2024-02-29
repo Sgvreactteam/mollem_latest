@@ -2,7 +2,7 @@ import React from "react";
 import "./phase.css";
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-
+import Button from "../../UI/Button";
 function InitialPhase() {
 
   const [projectName, setProjectName] = useState("Topiwala Plant");
@@ -199,11 +199,14 @@ function InitialPhase() {
             </div>
           </div>
           <div className="pt-2">
-            <div className="flex items-center">
-              <h2 className="py-3 text-2xl ">{t('activity')}</h2>
-              <span className="pl-2">
-                <img src="Images/Group.png" alt="image" />
-              </span>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <h2 className="py-3 text-2xl ">{t('activity')}</h2>
+                <span className="pl-2">
+                  <img src="Images/Group.png" alt="image" />
+                </span>
+              </div>
+                <Button type="regular">Add Chart Bar</Button>
             </div>
 
             <div className="flex justify-between flex-wrap">

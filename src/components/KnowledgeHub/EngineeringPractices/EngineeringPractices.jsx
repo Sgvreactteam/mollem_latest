@@ -9,7 +9,7 @@ import pdf4 from "./4.pdf";
 import pdf5 from "./5.pdf";
 import pdf6 from "./6.pdf";
 import photo2 from "./photo2.jpeg";
-import { useLanguage } from "../../context/LanguageContext";
+import { useLanguage } from "../../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -63,9 +63,8 @@ function EngineeringPractices() {
       source: pdf6,
     },
   ];
-
   return (
-    <>
+
       <div className="bg-background pt-20 w-full lg:px-8 md:px-5 px-3">
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  sm:gap-10 gap-4 pb-5">
           {pdf.map((card, key) => (
@@ -111,7 +110,7 @@ function EngineeringPractices() {
           ))}
         </div>
       </div>
-    </>
+
   );
 }
 

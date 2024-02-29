@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 function Topiwala() {
+  const { t } = useTranslation();
   return (
     <div className="pt-14">
       <div className="bg-[#F2F6FE] px-8 w-full h-screen lg:pt-4 sm:pt-2">
@@ -12,9 +13,10 @@ function Topiwala() {
           <div className="  grid grid-cols-5 gap-4 ">
             <div className="flex flex-col font-medium">
               <label htmlFor="" className="font-medium ">
-                Project title
+                {t('projectTitle')} <span className="text-[#FF0000] text-xl">*</span>
               </label>
               <input
+                required
                 type="text"
                 name=""
                 id=""
@@ -24,7 +26,67 @@ function Topiwala() {
 
             <div className="flex flex-col font-medium">
               <label htmlFor="" className=" font-medium">
-                Department/section
+                {t('dept/sec')} <span className="text-[#FF0000] text-xl">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                name=""
+                id=""
+                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
+              />
+            </div>
+            <div className="flex flex-col font-medium">
+              <label htmlFor="" className=" font-medium">
+                {t('projManr')} <span className="text-[#FF0000] text-xl">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                name=""
+                id=""
+                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
+              />
+            </div>
+            <div className="flex flex-col font-medium">
+              <label htmlFor="" className=" font-medium">
+                {t('projType')} <span className="text-[#FF0000] text-xl">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                name=""
+                id=""
+                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
+              />
+            </div>
+            <div className="flex flex-col font-medium">
+              <label htmlFor="" className=" font-medium">
+              {t('projLocation')} <span className="text-[#FF0000] text-xl">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                name=""
+                id=""
+                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
+              />
+            </div>
+            <div className="flex flex-col font-medium">
+              <label htmlFor="" className=" font-medium">
+              {t('expecStartingDate')} <span className="text-[#FF0000] text-xl">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                name=""
+                id=""
+                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
+              />
+            </div>
+            <div className="flex flex-col font-medium">
+              <label htmlFor="" className=" font-medium">
+              {t('expecBudget')}
               </label>
               <input
                 type="text"
@@ -35,7 +97,7 @@ function Topiwala() {
             </div>
             <div className="flex flex-col font-medium">
               <label htmlFor="" className=" font-medium">
-                Project manager
+              {t('projDur')}
               </label>
               <input
                 type="text"
@@ -46,7 +108,7 @@ function Topiwala() {
             </div>
             <div className="flex flex-col font-medium">
               <label htmlFor="" className=" font-medium">
-                Project type
+              {t('projSerialNo')}
               </label>
               <input
                 type="text"
@@ -57,7 +119,19 @@ function Topiwala() {
             </div>
             <div className="flex flex-col font-medium">
               <label htmlFor="" className=" font-medium">
-                Project location
+              {t('projRef')} <span className="text-[#FF0000] text-xl">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                name=""
+                id=""
+                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
+              />
+            </div>
+            <div className="flex flex-col font-medium">
+              <label htmlFor="" className=" font-medium">
+              {t('projGoals')}
               </label>
               <input
                 type="text"
@@ -68,73 +142,7 @@ function Topiwala() {
             </div>
             <div className="flex flex-col font-medium">
               <label htmlFor="" className=" font-medium">
-                Expecting starting date
-              </label>
-              <input
-                type="text"
-                name=""
-                id=""
-                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
-              />
-            </div>
-            <div className="flex flex-col font-medium">
-              <label htmlFor="" className=" font-medium">
-                Expecting budget
-              </label>
-              <input
-                type="text"
-                name=""
-                id=""
-                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
-              />
-            </div>
-            <div className="flex flex-col font-medium">
-              <label htmlFor="" className=" font-medium">
-                Project duration
-              </label>
-              <input
-                type="text"
-                name=""
-                id=""
-                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
-              />
-            </div>
-            <div className="flex flex-col font-medium">
-              <label htmlFor="" className=" font-medium">
-                Project serial number(given)
-              </label>
-              <input
-                type="text"
-                name=""
-                id=""
-                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
-              />
-            </div>
-            <div className="flex flex-col font-medium">
-              <label htmlFor="" className=" font-medium">
-                Project reference
-              </label>
-              <input
-                type="text"
-                name=""
-                id=""
-                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
-              />
-            </div>
-            <div className="flex flex-col font-medium">
-              <label htmlFor="" className=" font-medium">
-                Project goals & objectives
-              </label>
-              <input
-                type="text"
-                name=""
-                id=""
-                className="bg-[#F6F6F6] border-2 p-1 mt-1 outline-0 rounded-md"
-              />
-            </div>
-            <div className="flex flex-col font-medium">
-              <label htmlFor="" className=" font-medium">
-                Strategic alignment
+              {t('stratAli')}
               </label>
               <input
                 type="text"
@@ -147,7 +155,7 @@ function Topiwala() {
 
           <div className="text-center pt-5">
             <button className="font-medium text-white bg-primary py-1 px-4 rounded-3xl">
-              Verfiy
+            {t('verify')}
             </button>
           </div>
         </div>

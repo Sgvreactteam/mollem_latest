@@ -1,6 +1,6 @@
 import React from "react";
 import { useLanguage } from "../../../context/LanguageContext";
-
+import Button from "../../UI/Button";
 import { useTranslation } from "react-i18next";
 function CashFlow() {
   const { language, toggleLanguage } = useLanguage();
@@ -47,15 +47,15 @@ function CashFlow() {
         </tbody>
       </table>
       <div className="flex flex-row md:gap-10 gap-3 mt-16">
-        <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+        <Button type="blueButton">
           {t("print")}
-        </button>
-        <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+        </Button>
+        <Button type="blueButton">
           {t("export")}
-        </button>
-        <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+        </Button>
+        <Button type="blueButton" className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
           {t("saveLater")}
-        </button>
+        </Button>
         <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
           {t("verify")}
         </button>

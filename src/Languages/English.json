@@ -36,6 +36,7 @@
   "currentProjMan": "Current Projects",
   "database": "Database",
   "projMan": "Project management",
+  "projManr": "Project Manager",
 
   "duration": "Duration",
   "projectSize": "Project Size",
@@ -187,7 +188,8 @@
 
   "addNewTask": "Add New Task",
   "filter": "Filter by date",
-  "sort by Cost/date":"Sort by Cost/date",
+  "sort by cost":"Sort by cost",
+  "sort by date":"Sort by date",
   "hide": "Hide",
   "customize": "Customize",
   "dept": "Department",
@@ -199,5 +201,11 @@
   "analysis": "Analysis",
 
   "cumulative": "Cumulative",
-  "criType": "Criteria Type"
+  "criType": "Criteria Type",
+  "currentProjdash": "Current Projects Dashboard",
+  "topiwalaPlant": "Topiwala Plant",
+  "unitPri": "Unit Price",
+  "prod": "Product",
+  "itemTy1": "Item Type 1",
+  "itemTy2": "Item Type 2"
 }

@@ -47,7 +47,7 @@ function PreparationPhase() {
         </div>
         <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-green-600 to-transparent"></div>
       </div>
- 
+
       <div className="flex flex-col">
         <p className="text-xl font-medium mt-4">{t("activities")}</p>
         <div className="flex flex-row gap-3 w-full flex-wrap mt-6">
