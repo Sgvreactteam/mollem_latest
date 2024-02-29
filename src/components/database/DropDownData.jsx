@@ -43,10 +43,10 @@ export const dropdownList = [
     {
         type: "Sort by Cost/date",
         items:[
-            "Sort cost by Ascending ",
-            "Sort cost by Descending",
-            "Sort date by Ascending ",
-            "Sort date by Descending",
+            "Sort by cost Ascending ",
+            "Sort by cost Descending",
+            "Sort by date Ascending ",
+            "Sort by date Descending",
         ]
     },
     
