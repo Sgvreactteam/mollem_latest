@@ -365,7 +365,7 @@ function TaskList() {
                 <div className="w-[10%] items-center flex justify-center px-2 py-2 font-normal text-xs">
                   <td>{item.projectName}</td>
                 </div>
-                {checkedT&& <div className="w-[10%] items-center flex justify-center px-2 py-2 font-normal text-xs">
+                {checkedT&& <div className="w-[10%] items-center flex justify-end px-2 py-2 font-normal text-xs">
                   <td>{item.taskName}</td>
                 </div>}
                 {checkedD&& <div className="w-[10%] items-center flex justify-end px-2 py-2 textcolor font-normal text-xs">

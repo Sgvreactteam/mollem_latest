@@ -19,33 +19,17 @@ function Templates() {
 
   return (
     <div className="bg-[#F2F6FE] lg:px-8 md:px-5 px-3 w-full md:h-screen h-full sm:pt-20 pt-16">
-      <div className="relative max-w-4xl mx-auto lg:text-3xl md:text-2xl text-xl  font-medium text-center leading-5 pb-1">
-        {t("templatesHeading")}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-green-600 to-transparent"></div>
-      </div>
+      
 
-      <div className="flex flex-col  md:mt-12 sm:mt-8 mt-3">
+      <div className="flex flex-col  md:mt-4 sm:mt-8 mt-3">
         <div
           className="overflow-auto scrollbar-hidden"
           style={{ scrollbarWidth: "none" }}
         >
-          <div className="flex gap-3 min-w-96 ">
-            <button
-              className="bg-primary py-1 px-4 rounded-3xl font-medium   text-white focus:bg-[#F0F2FC] focus:text-primary "
-              onClick={prReport}
-            >
-              {t("periodicRep")}
-            </button>
-            <button
-              className=" bg-primary py-1 px-4 rounded-3xl font-medium   text-white focus:bg-[#F0F2FC] focus:text-primary"
-              onClick={manageReport}
-            >
-              {t("PMPlan")}
-            </button>
-          </div>
+          
         </div>
         {report && <ProjectPlan t={t} />}
-        {mgReport && !report && <PeriodicReport t={t} />}
+        {/* {mgReport && !report && <PeriodicReport t={t} />} */}
       </div>
     </div>
   );
@@ -56,9 +40,9 @@ export default Templates;
 const ProjectPlan = ({ t }) => {
   return (
     <>
-      <div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-1 sm:gap-3 gap-2 mt-4">
+      <div className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-1 sm:gap-3 gap-2 ">
         <div className="flex flex-col  sm:mt-4 mt-0 ">
-          <h2 className="font-semibold text-sm">{t("cretingRiskLog")}</h2>
+          <h2 className="font-semibold">{t("cretingRiskLog")}</h2>
           <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
             <p>{t("loremText")}</p>
           </div>
@@ -80,9 +64,61 @@ const ProjectPlan = ({ t }) => {
           <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
             <p>{t("loremText")}</p>
           </div>
-        </div>
+        </div> <br />
 
-        <div className="flex flex-col  sm:mt-4 mt-0 box-shadow bg-white px-2 rounded-2xl">
+
+        <div className="flex flex-col  sm:mt-4 mt-0 ">
+          <h2 className="font-semibold">{t("cretingRiskLog")}</h2>
+          <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
+            <p>{t("loremText")}</p>
+          </div>
+        </div>
+        <div className="flex flex-col  sm:mt-4 mt-0">
+          <h2 className="font-semibold">{t("creatingStakeLog")}</h2>
+          <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
+            <p>{t("loremText")}</p>
+          </div>
+        </div>
+        <div className="flex flex-col  sm:mt-4 mt-0">
+          <h2 className="font-semibold">{t("creatingDisputesLog")}</h2>
+          <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
+            <p>{t("loremText")}</p>
+          </div>
+        </div>
+        <div className="flex flex-col  sm:mt-4 mt-0">
+          <h2 className="font-semibold">{t("periodicRep")}</h2>
+          <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
+            <p>{t("loremText")}</p>
+          </div>
+        </div> <br />
+
+
+        <div className="flex flex-col  sm:mt-4 mt-0 ">
+          <h2 className="font-semibold">{t("cretingRiskLog")}</h2>
+          <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
+            <p>{t("loremText")}</p>
+          </div>
+        </div>
+        <div className="flex flex-col  sm:mt-4 mt-0">
+          <h2 className="font-semibold">{t("creatingStakeLog")}</h2>
+          <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
+            <p>{t("loremText")}</p>
+          </div>
+        </div>
+        <div className="flex flex-col  sm:mt-4 mt-0">
+          <h2 className="font-semibold">{t("creatingDisputesLog")}</h2>
+          <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
+            <p>{t("loremText")}</p>
+          </div>
+        </div>
+        <div className="flex flex-col  sm:mt-4 mt-0">
+          <h2 className="font-semibold">{t("periodicRep")}</h2>
+          <div className=" bg-white   sm:p-4 p-2 mt-1 rounded-2xl box-shadow">
+            <p>{t("loremText")}</p>
+          </div>
+        </div> 
+
+        {/* <div className="flex flex-col  sm:mt-4 mt-0 box-shadow bg-white px-2 rounded-2xl">
           <p className="font-semibold text-xl ">{t("temp&Forms")}</p>
           <div className=" relative bg-transparent mt-4 flex justify-center items-center">
             <img src="/Images/img/Group.jpg" className="" alt="" />
@@ -116,9 +152,9 @@ const ProjectPlan = ({ t }) => {
               </defs>
             </svg>
           </div>
-        </div>
-      </div>
-      <div className="flex flex-row gap-3 flex-wrap mt-12">
+        </div>*/}
+      </div> 
+      {/* <div className="flex flex-row gap-3 flex-wrap mt-12">
         <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
           {t("withdrawlProcedures")}
         </button>
@@ -142,7 +178,7 @@ const ProjectPlan = ({ t }) => {
           {" "}
           {t("payingInvoices")}
         </button>
-      </div>
+      </div> */}
     </>
   );
 };
@@ -151,7 +187,7 @@ const PeriodicReport = ({ t }) => {
     <>
       <div className="grid grid-cols-5 gap-3 mt-4">
         <div className="flex flex-col  mt-4 ">
-          <h2 className="font-semibold text-sm">{t("cretingRiskLog")}</h2>
+          <h2 className="font-semibold">{t("cretingRiskLog")}</h2>
           <div className=" bg-white   p-4 mt-1 rounded-2xl box-shadow">
             <p>{t("loremText")}qqq</p>
           </div>
@@ -175,7 +211,7 @@ const PeriodicReport = ({ t }) => {
           </div>
         </div>
 
-        <div className="flex flex-col  mt-4 box-shadow bg-white px-2 rounded-2xl">
+        {/* <div className="flex flex-col  mt-4 box-shadow bg-white px-2 rounded-2xl">
           <p className="font-semibold text-xl ">{t("temp&Forms")}</p>
           <div className=" relative bg-transparent mt-4 flex justify-center items-center">
             <img src="/Images/img/Group.jpg" className="" alt="" />
@@ -209,7 +245,7 @@ const PeriodicReport = ({ t }) => {
               </defs>
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-row gap-3 flex-wrap mt-12">
         <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">

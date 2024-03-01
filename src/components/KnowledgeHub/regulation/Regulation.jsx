@@ -41,11 +41,11 @@ export default function Regulation() {
       <div className="w-full bg-background lg:px-8 md:px-5 px-3 pt-20">
         
 
-        <div className="flex flex-col  md:mt-12 sm:mt-8 mt-3">
+        <div className="flex flex-col">
           
 
           
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  sm:gap-10 gap-4  pt-10 pb-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  sm:gap-10 gap-4 pb-5">
               {cardData.map((card, key) => (
                 <div className="" key={key}>
                   <Card sx={{}}>
