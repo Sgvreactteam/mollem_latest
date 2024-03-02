@@ -13,7 +13,7 @@ export default function Regulation() {
     {
       title: "PDF title here",
       date: "12/01/2000",
-      //   source: pdf1,
+        // source: pdf,
     },
     {
       title: "PDF title here",
@@ -39,12 +39,7 @@ export default function Regulation() {
   return (
     <>
       <div className="w-full bg-background lg:px-8 md:px-5 px-3 pt-20">
-        
-
         <div className="flex flex-col  md:mt-12 sm:mt-8 mt-3">
-          
-
-          
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  sm:gap-10 gap-4  pt-10 pb-5">
               {cardData.map((card, key) => (
                 <div className="" key={key}>

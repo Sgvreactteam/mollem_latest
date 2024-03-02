@@ -29,6 +29,10 @@
   "standardDeviation": "Standard deviation",
   "lowestItemPrice": "Lowest item price",
   "topItemPrice": "Top item price",
+  "atLeastCharact": "atleast 8 characters",
+  "name@": "name@gmail.com",
+  "forgot": "Forgot",
+  "forgotInfo": "Lost in the password maze, a simple reset paves the way to brighter ways.",
 
   "userAdminHeading": "Managing all projects tasks from a single hub",
   "knowledgeHub": "Knowledge Hub",

@@ -39,7 +39,7 @@ function Header() {
     setChecked(!checked);
   };
 
-  return location.pathname == "/" || location.pathname == "/login" ? (
+  return location.pathname == "/" || location.pathname == "/login" || location.pathname == "/forgot" ? (
     <></>
   ) : (
     <div>
@@ -145,11 +145,6 @@ const NestedDrawer = () => {
   return (
     <div>
       <div>
-       
-
-      
-
-         
         <ListItemButton onClick={handleTask}>
           <div className="flex items-center justify-between w-full">
           {isTaskOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
@@ -216,7 +211,7 @@ const NestedDrawer = () => {
 
         {isProjectOpen && (
           <div className="">
-            <Link to="/preparation">
+            <Link to="/preparation/Bill">
               <ListItemButton className=" !text-end !pr-10">
                 <ListItemText primary={t("preparationPhase")} />
               </ListItemButton>

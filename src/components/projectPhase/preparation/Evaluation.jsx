@@ -9,7 +9,7 @@ function Evaluation() {
       cumulative: "30%",
       weight: "30%",
       desc: "-",
-      criType: "Primary / Secondary",
+      criType: <DropDownPrimary/>,
       some: "1",
     },
     {
@@ -37,7 +37,7 @@ function Evaluation() {
       cumulative: "100%",
       weight: "30%",
       desc: "-",
-      criType: "Primary / Secondary",
+      criType: <DropDownPrimary/>,
       some: "3",
     },
   ];
@@ -69,10 +69,6 @@ function Evaluation() {
         <tbody>
           {evalCri.map((item) => (
             <tr className="bg-white">
-              
-              
-              
-              
 
               <td className="border border-[#828282] p-2">{item.some}</td>
               <td className="border border-[#828282] p-2">{item.criType}</td>
@@ -103,3 +99,23 @@ function Evaluation() {
 }
 
 export default Evaluation;
+
+
+const DropDownPrimary = () => {
+  const options = ["Primary", "Secondary"];
+  return (
+    <select
+      id=""
+      name=""
+      defaultValue={"Primary"}
+      className=" block w-full  pr-14 py-2  border-gray-300 focus:outline-none
+       focus:ring-indigo-500 focus:border-indigo-500  rounded-md"
+    >
+      {options.map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  );
+};

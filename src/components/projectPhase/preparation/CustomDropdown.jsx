@@ -7,7 +7,7 @@ const CustomDropdown = () => {
     }
   return (
     <div className='relative'>
-            <button onClick={handledropdownClick} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-black focus:outline-none font-medium rounded-lg text-sm px-1 py-2.5 text-center inline-flex items-center" type="button">Dropdown button <svg className="w-2 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <button onClick={handledropdownClick} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-black focus:outline-none font-medium rounded-lg text-sm px-1 py-2.5 text-center inline-flex items-center" type="button">Dropdown button <svg className="w-2 h-2.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                 </svg>
             </button>
