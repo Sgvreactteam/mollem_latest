@@ -1,5 +1,5 @@
 import React from "react";
-import "./login.css";
+import "./forgot.css";
 // import Swiper core and required modules
 import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,7 +18,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { t } from "i18next";
 
-function Login() {
+function Forgot() {
   const { i18n } = useTranslation();
   const [checked, setChecked] = useState(i18n.language === "ar");
   const handleChange = () => {
@@ -60,7 +60,7 @@ function Login() {
       style={{ backgroundImage: `url(${imgUrl2})` }}
     >
       <div className="flex flex-col items-center justify-center  ">
-        {/* <Switch className="mx-auto" color="default" checked={checked} inputProps={{ 'aria-label': 'toggle language' }} onChange={handleChange} /> */}
+         {/* <Switch className="mx-auto" color="default" checked={checked} inputProps={{ 'aria-label': 'toggle language' }} onChange={handleChange} />  */}
         <div className="flex  items-center justify-center">
           <button
             className="text-white  bg-primary rounded-2xl px-4"
@@ -74,10 +74,10 @@ function Login() {
           <img src="/Images/loginLogo.svg" alt="logo" className="" />
 
           <h1 className="text-xl font-medium text-[#0C0830] py-1 mt-2">
-            {t("login")}
+            {t("forgotPass")}
           </h1>
           <p className="text-lg font-normal text-[#808080]  leading-[1.5rem] ">
-            {t("loginInfo")}
+            {t("forgotInfo")}
           </p>
 
           <form
@@ -105,11 +105,11 @@ function Login() {
             </div>{" "}
             <div className="w-full flex flex-col">
               <label className="font-medium text-[#0C0830] ">
-                {t("password")}
+                {t("newPassword")}
               </label>
               <input
                 className="bg-[#F9FAFB] border-2 p-1 outline-0 rounded-md text-base text-[#808080] px-2"
-                placeholder="password"
+                placeholder={t("password")}
                 type="password"
                 name="password"
                 value={formik.values.password}
@@ -123,45 +123,35 @@ function Login() {
                 </div>
               ) : null}
             </div>
-            <div>
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  className=" "
-                  style={{ accentColor: "#018B00" }}
-                />
-                <span className="ml-2 font-normal text-[#808080]">
-                  {t("keepLogged")}
-                </span>
+            <div className="w-full flex flex-col">
+              <label className="font-medium text-[#0C0830] ">
+                {t("verifyPass")}
               </label>
+              <input
+                className="bg-[#F9FAFB] border-2 p-1 outline-0 rounded-md text-base text-[#808080] px-2"
+                placeholder={t("atLeastCharact")}
+                type="password"
+                name="password"
+                value={formik.values.password}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+
+              {formik.touched.password && formik.errors.password ? (
+                <div className="text-start text-sm text-red-600 ">
+                  {formik.errors.password}
+                </div>
+              ) : null}
             </div>
             <Link
-              to="/useradmin"
-              type="submit"
-              className="  rounded-md bg-primary py-3 text-white flex items-center justify-center"
+              to="/login"
+              className="  rounded-md bg-primary py-3 text-white flex items-center justify-center mt-2"
             >
-              {t("login")}
+              {t("submit")}
               <span className="ml-1">
                 <FaArrowRight />
               </span>
             </Link>
-            <div className=" text-center ">
-              <h4 className="mt-2">
-                <span className="font-normal text-[#808080]">
-                  {t("dontHaveAccount")}
-                </span>
-                <Link to="/">
-                  <span className="font-semibold text-primary">
-                    {t("signup")}
-                  </span>
-                </Link>
-              </h4>
-            </div>
-            <div className="flex justify-center text-primary">
-              <Link to="/forgot">
-                <h4 className="font-semibold">{t("forgotPass")}</h4>
-              </Link>
-            </div>
           </form>
         </div>
       </div>
@@ -197,4 +187,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Forgot;

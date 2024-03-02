@@ -20,6 +20,8 @@ import UserTask from "./components/ProjectManagement/UserTask/UserTask";
 import TaskCreate from "./components/ProjectManagement/TaskCreate/TaskCreate";
 import Task from "./components/ProjectManagement/Task/Task";
 import KnowledgeHub from "./components/KnowledgeHub/KnowledgeHub";
+import Forgot from "./components/forgot/Forgot";
+
 
 function App() {
   const location = useLocation();
@@ -33,18 +35,22 @@ function App() {
         <Routes>
           <Route index element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot" element={<Forgot />} />
           <Route path="/useradmin" element={<UserAdmin />} />
           <Route path="/topiwala" element={<Topiwala />} />
           <Route path="/knowledgeHub/reg" element={<KnowledgeHub />} />
 
-
-          {/* <Route path="/knowledgeHub/reg" element={<Regulation />} /> */}
           <Route path="/knowledgeHub/ep" element={<KnowledgeHub />} />
           <Route path="/knowledgeHub/template" element={<KnowledgeHub />} />
 
           
           <Route path="/data" element={<Database />} />
-          <Route path="/preparation" element={<PreparationPhase />} />
+          <Route path="/preparation/Bill" element={<PreparationPhase />} />
+          <Route path="/preparation/Evalution" element={<PreparationPhase />} />
+          <Route path="/preparation/cashFlow" element={<PreparationPhase />} />
+          <Route path="/preparation/TimeF" element={<PreparationPhase />} />
+
+
           <Route path="/initiatingphase" element={<InitialPhase />} />
           <Route path="/execution" element={<Execution />} />
           <Route path="/close" element={<Close />} />
