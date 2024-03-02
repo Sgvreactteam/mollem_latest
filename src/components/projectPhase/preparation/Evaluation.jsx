@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FormControl, MenuItem, Select } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../context/LanguageContext";
+import EvalDropdown from "./EvalDropdown";
 function Evaluation() {
   const evalCri = [
     {
@@ -71,7 +72,7 @@ function Evaluation() {
             <tr className="bg-white">
 
               <td className="border border-[#828282] p-2">{item.some}</td>
-              <td className="border border-[#828282] p-2">{item.criType}</td>
+              <td className="border border-[#828282] p-2">{item.criType ==="Primary / Secondary"? (<EvalDropdown/>): (item.criType)}</td>
               <td className="border border-[#828282] p-2">{item.desc} </td>
               <td className="border border-[#828282] p-2">{item.weight} </td>
               <td className="border border-[#828282] p-2">{item.cumulative}</td>

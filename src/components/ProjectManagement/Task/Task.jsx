@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import TaskList from './TaskList/TaskList';
 import DashBoard from './Dashboard/Dashboard'
 import Timeline from './Timeline/Timeline'
-function Task({checkedA}) {
+import Button from '../../UI/Button';
+function Task() {
 
     const { t } = useTranslation();
     
@@ -35,12 +36,12 @@ function Task({checkedA}) {
     <div className='bg-[#F2F6FE] h-screen pt-20 whitespace-nowrap'>
         <div className="flex justify-between ml-8 pb-8 mr-8">
         <div className="flex flex-row gap-7 ">
-          <button
+          <Button
             onClick={showDashboard}
-            className="bg-white py-1 px-4 rounded-3xl font-medium   text-primary focus:bg-primary focus:text-white"
+            type="whiteButton"
           >
               {t('dashboard')}
-          </button>
+          </Button>
           <button
             onClick={showTasklist}
             className="bg-white py-1 px-4 rounded-3xl font-medium   text-primary focus:bg-primary focus:text-white"
