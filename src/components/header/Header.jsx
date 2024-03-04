@@ -39,7 +39,7 @@ function Header() {
     setChecked(!checked);
   };
 
-  return location.pathname == "/" || location.pathname == "/login" || location.pathname == "/forgot" ? (
+  return location.pathname == "/" || location.pathname == "/login" || location.pathname == "/forgot" || location.pathname == "/CompanySignup" ? (
     <></>
   ) : (
     <div>

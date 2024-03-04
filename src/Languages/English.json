@@ -212,5 +212,20 @@
   "itemTy1": "Item Type 1",
   "itemTy2": "Item Type 2",
   "show": "Show",
-  "entries": "entries"
+  "entries": "entries",
+  "signupU": "Sign up as a User",
+  "signupC": "Sign up as a Company",
+  "signupInfoC": "Give us some information about your company to get access to Mollem.",
+  "logo": "Logo",
+  "contact": "Contact Number",
+  "next": "Next",
+  "address": "Address",
+  "typeOfB": "Type of Business",
+  "Oname": "Owner Name",
+  "taxID": "Tax ID Number",
+  "indType": "Industry Type",
+  "compSize": "Company Size",
+  "biusDesc": "Buisness Description",
+  "emailDomain": "Email Domain"
+
 }

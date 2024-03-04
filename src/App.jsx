@@ -34,6 +34,7 @@ function App() {
         {/* <HeaderProjectM /> */}
         <Routes>
           <Route index element={<Signup/>} />
+          <Route path="/CompanySignup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot" element={<Forgot />} />
           <Route path="/useradmin" element={<UserAdmin />} />
