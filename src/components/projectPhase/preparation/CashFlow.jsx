@@ -56,9 +56,9 @@ function CashFlow() {
         <Button type="regular" className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
           {t("saveLater")}
         </Button>
-        <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+        <Button type="regular">
           {t("verify")}
-        </button>
+        </Button>
       </div>
     </div>
   );

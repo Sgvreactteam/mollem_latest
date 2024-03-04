@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import Button from "../UI/Button";
 function Topiwala() {
   const { t } = useTranslation();
   return (
@@ -154,9 +155,9 @@ function Topiwala() {
           </div>
 
           <div className="text-center pt-5">
-            <button className="font-medium text-white bg-primary py-1 px-4 rounded-3xl">
+            <Button type="primary">
             {t('verify')}
-            </button>
+            </Button>
           </div>
         </div>
       </div>

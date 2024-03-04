@@ -16,10 +16,10 @@ const EvalDropdown = () => {
             { dropdown===true? (<div id="dropdown" className="absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                 <li>
-                    <a onClick={handledropdownClick} href="#" className="block text-black border px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Primary</a>
+                    <p onClick={handledropdownClick}  className="block text-black border px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Primary</p>
                 </li>
                 <li>
-                    <a onClick={handledropdownClick} href="#" className="block text-black px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Secondary</a>
+                    <p onClick={handledropdownClick}  className="block text-black px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Secondary</p>
                 </li>
                 
                 </ul>

@@ -5,6 +5,7 @@ import CashFlow from "./CashFlow";
 import TimeFrame from "./TimeFrame";
 import { useLanguage } from "../../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
+
 import  Button  from "../../UI/Button";
 import { useLocation } from "react-router-dom";
 function PreparationPhase() {
@@ -52,6 +53,7 @@ function PreparationPhase() {
       <div className="flex flex-col">
         <p className="text-xl font-medium mt-4">{t("activities")}</p>
         <div className="flex flex-row gap-3 w-full flex-wrap mt-6">
+
         {
                 routsArray && routsArray.map((item,index)=>{
                     return  <Button

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLanguage } from "../../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
 import OnAnalysisTable from "./OnAnalysisTable";
+import Button from "../../UI/Button";
 import CustomDropdown from "./CustomDropdown";
 function BillofQuantities() {
   const { language, toggleLanguage } = useLanguage();
@@ -136,18 +137,19 @@ function BillofQuantities() {
 
       <div className="flex justify-center">
         <div className="flex flex-row gap-5 mt-16">
-        { analysis===false ? <button onClick={handleAnalysis} className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          {analysis === false ? <Button onClick={handleAnalysis} type="regular">
             {t("analysis")}
-          </button> : ""}
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          </Button> : ""}
+          <Button type="regular">
+
             {t("verify")}
-          </button>
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          </Button>
+          <Button type="regular">
             {t("saveLater")}
-          </button>
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          </Button>
+          <Button type="regular">
             {t("print")}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

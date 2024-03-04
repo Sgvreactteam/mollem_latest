@@ -2,7 +2,7 @@ import React from "react";
 import "./close.css";
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
-
+import Button from "../../UI/Button";
 function Close() {
 
   const [projectName, setProjectName] = useState("Topiwala Plant");
@@ -208,24 +208,24 @@ function Close() {
 
             <div className="flex md:justify-between flex-wrap">
               <div className="flex grid-cols-2 gap-3 mb-4">
-                <button className="bg-primary py-1 px-4 rounded-3xl font-medium 1  text-white focus:bg-[#F0F2FC] focus:text-primary">
+              <Button type="regular">
                   {t('billOf')}
-                </button>
-                <button className=" bg-primary py-1 px-4 rounded-3xl font-medium 2  text-white focus:bg-[#F0F2FC] focus:text-primary">
+                </Button>
+                <Button type="regular">
                   {t('evalCri')}
-                </button>
-                <button className=" bg-primary py-1 px-4 rounded-3xl font-medium  3 text-white focus:bg-[#F0F2FC] focus:text-primary">
+                </Button>
+                <Button type="regular">
                   {t('timeFrame')}
-                </button>
+                </Button>
               </div>
-              <button className=" bg-primary py-1 px-4 mb-4 rounded-3xl font-medium   text-white focus:bg-[#F0F2FC] focus:text-primary flex items-center">
+              <Button type="regular">
                 {t('sendNote')}
                 <img
                   src="Images/Isolation_Mode.svg"
                   alt="img"
                   className="ps-2"
                 />
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -237,18 +237,18 @@ function Close() {
               </span>
             </div>
             <div className="flex flex-wrap gap-3 mb-4">
-              <button className="bg-primary py-1 px-4 rounded-3xl font-medium 1  text-white focus:bg-[#F0F2FC] focus:text-primary">
+            <Button type="regular">
                 {t('projChar')}
-              </button>
-              <button className=" bg-primary py-1 px-4 rounded-3xl font-medium 2  text-white focus:bg-[#F0F2FC] focus:text-primary">
+              </Button>
+              <Button type="regular">
                 {t('projHand')}
-              </button>
-              <button className=" bg-primary py-1 px-4 rounded-3xl font-medium  3 text-white focus:bg-[#F0F2FC] focus:text-primary">
+              </Button>
+              <Button type="regular">
                 {t('projPlan')}
-              </button>
-              <button className=" bg-primary py-1 px-4 rounded-3xl font-medium  3 text-white focus:bg-[#F0F2FC] focus:text-primary">
+              </Button>
+              <Button type="regular">
                 {t('projRep')}
-              </button>
+              </Button>
             </div>
           </div>
         </div>

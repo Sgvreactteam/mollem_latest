@@ -210,5 +210,7 @@
   "unitPri": "Unit Price",
   "prod": "Product",
   "itemTy1": "Item Type 1",
-  "itemTy2": "Item Type 2"
+  "itemTy2": "Item Type 2",
+  "show": "Show",
+  "entries": "entries"
 }
