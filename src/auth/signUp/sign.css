@@ -18,3 +18,6 @@
   /* background: var(--swiper-pagination-color, var(--swiper-theme-color)); */
   background: #bfc4db !important;
 }
+::-webkit-scrollbar{
+  width: 0;
+}
