@@ -5,6 +5,7 @@ import CashFlow from "./CashFlow";
 import TimeFrame from "./TimeFrame";
 import { useLanguage } from "../../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
+import Button from "../../UI/Button";
 function PreparationPhase() {
   const { language, toggleLanguage } = useLanguage();
   const [bill, setBill] = useState(true);
@@ -51,30 +52,27 @@ function PreparationPhase() {
       <div className="flex flex-col">
         <p className="text-xl font-medium mt-4">{t("activities")}</p>
         <div className="flex flex-row gap-3 w-full flex-wrap mt-6">
-          <button
+          <Button
             onClick={showBillHandler}
-            className="bg-primary py-1 px-4 rounded-3xl font-medium text-white focus:bg-white focus:text-primary"
+            type="regular"
           >
             {t("billOf")}
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={showEvaluationHandler}
-            className="bg-primary py-1 px-4 rounded-3xl font-medium   text-white focus:bg-white focus:text-primary"
-          >
+            type="regular"          >
             {t("evalCri")}
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={showTimeHandler}
-            className="bg-primary py-1 px-4 rounded-3xl font-medium   text-white focus:bg-white focus:text-primary"
-          >
+            type="regular"          >
             {t("timeFrame")}
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={showCashHandler}
-            className="bg-primary py-1 px-4 rounded-3xl font-medium   text-white focus:bg-white focus:text-primary"
-          >
+            type="regular"          >
             {t("cashFlow")}
-          </button>
+          </Button>
         </div>
         {bill && <BillofQuantities />}
         {evaluation && <Evaluation />}

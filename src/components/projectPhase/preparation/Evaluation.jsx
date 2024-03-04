@@ -4,6 +4,7 @@ import { FormControl, MenuItem, Select } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../../context/LanguageContext";
 import EvalDropdown from "./EvalDropdown";
+import Button from "../../UI/Button";
 function Evaluation() {
   const evalCri = [
     {
@@ -85,18 +86,18 @@ function Evaluation() {
         </tbody>
         </table>
         <div className="flex flex-row gap-3 mt-16">
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          <Button type="regular">
             {t("print")}
-          </button>
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          </Button>
+          <Button type="regular">
             {t("export")}
-          </button>
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          </Button>
+          <Button type="regular">
             {t("saveLater")}
-          </button>
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white">
+          </Button>
+          <Button type="regular">
             {t("verify")}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

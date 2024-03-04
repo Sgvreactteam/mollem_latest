@@ -39,6 +39,10 @@ function InitialPhase() {
     reader.readAsDataURL(file);
     console.log(selectedImage);
   };
+
+  const removeFileInput = () => {
+    setSelectedImage(null)
+  }
   return (
     <div>
       <div className="pt-14">
@@ -51,14 +55,16 @@ function InitialPhase() {
           </div>
 
           <div className="max-w-sm mx-auto">
-            <div className="relative z-10 bg-white mt-8  flex flex-col items-center">
+            <div className="relative z-10 bg-white mt-8 flex flex-col items-center">
               <svg
                 className="absolute z-30 -top-4 -right-4"
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
                 height="35"
                 viewBox="0 0 35 35"
+                style={{cursor: "pointer"}}
                 fill="none"
+                onClick={removeFileInput}
               >
                 <circle cx="17.5" cy="17.5" r="17.5" fill="#ABFFAA" />
                 <path
@@ -70,14 +76,16 @@ function InitialPhase() {
                   fill="#018B00"
                 />
               </svg>
-              <input
+              {!selectedImage && <input
                 id="fileInput"
                 onChange={handleFileChange}
                 style={{ display: "none" }}
                 type="file"
+                className="border"
+                accept=".jpg, .png" 
                 name=""
-              />
-              <button className="pt-24 px-60" onClick={handleUploadClick}>
+              />}
+              <button className="pt-24 px-40" onClick={handleUploadClick}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="107"
@@ -107,15 +115,11 @@ function InitialPhase() {
                 </svg>
               </button>
               {selectedImage && (
-                <div className=" absolute z-20" style={{ zIndex: "20" }}>
+                <div className=" absolute z-20 h-[100%] w-auto" style={{ zIndex: "20" }}>
                   <img
                     src={selectedImage}
+                    className="h-full w-auto"
                     alt="Selected"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
                   />
                 </div>
               )}
@@ -211,24 +215,24 @@ function InitialPhase() {
 
             <div className="flex justify-between flex-wrap">
               <div className="flex mb-4 gap-3">
-                <button className="bg-primary py-1 px-4 rounded-3xl font-medium 1  text-white focus:bg-[#F0F2FC] focus:text-primary">
+                <Button type="regular">
                   {t('billOf')}
-                </button>
-                <button className=" bg-primary py-1 px-4 rounded-3xl font-medium 2  text-white focus:bg-[#F0F2FC] focus:text-primary">
+                </Button>
+                <Button type="regular">
                   {t('evalCri')}
-                </button>
-                <button className=" bg-primary py-1 px-4 rounded-3xl font-medium  3 text-white focus:bg-[#F0F2FC] focus:text-primary">
+                </Button>
+                <Button type="regular">
                   {t('timeFrame')}
-                </button>
+                </Button>
               </div>
-              <button className=" bg-primary mb-4 py-1 px-4 rounded-3xl font-medium   text-white focus:bg-[#F0F2FC] focus:text-primary flex items-center">
+              <Button type="regular">
                 {t('sendNote')}
                 <img
                   src="Images/Isolation_Mode.svg"
                   alt="img"
                   className="ps-2"
                 />
-              </button>
+              </Button>
             </div>
           </div>
 
@@ -240,18 +244,18 @@ function InitialPhase() {
               </span>
             </div>
             <div className="flex flex-wrap mb-4 gap-3">
-              <button className="bg-primary py-1 px-4 rounded-3xl font-medium 1  text-white focus:bg-[#F0F2FC] focus:text-primary">
+              <Button type="regular">
                 {t('projChar')}
-              </button>
-              <button className=" bg-primary py-1 px-4 rounded-3xl font-medium 2  text-white focus:bg-[#F0F2FC] focus:text-primary">
+              </Button>
+              <Button type="regular">
                 {t('projHand')}
-              </button>
-              <button className=" bg-primary py-1 px-4 rounded-3xl font-medium  3 text-white focus:bg-[#F0F2FC] focus:text-primary">
+              </Button>
+              <Button type="regular">
                 {t('projPlan')}
-              </button>
-              <button className=" bg-primary py-1 px-4 rounded-3xl font-medium  3 text-white focus:bg-[#F0F2FC] focus:text-primary">
+              </Button>
+              <Button type="regular">
                 {t('projRep')}
-              </button>
+              </Button>
             </div>
           </div>
         </div>

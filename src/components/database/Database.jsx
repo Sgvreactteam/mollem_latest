@@ -10,6 +10,7 @@ import { FormControl, MenuItem, Select } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import CustomDropDown from "./CustomDropDown";
 import { dropdownList } from "./DropDownData";
+import Button from "../UI/Button";
 
 // import MenuItem from '@mui/material/MenuItem';
 // import Select from '@mui/material/Select';
@@ -716,10 +717,10 @@ function Database() {
           <span className="font-semibold mx-1">{totalData} </span>
         </p>
 
-        <button className="font-medium bg-primary text-[16px] text-white rounded-full px-5 py-2 ">
+        <Button type="regular">
           {" "}
           {t("printAReport")}
-        </button>
+        </Button>
       </div>
     </div>
   );

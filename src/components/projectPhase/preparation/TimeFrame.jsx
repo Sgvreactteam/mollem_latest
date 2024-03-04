@@ -1,5 +1,5 @@
 import React from "react";
-
+import Button from "../../UI/Button";
 import { useLanguage } from "../../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
 function TimeFrame() {
@@ -17,10 +17,10 @@ function TimeFrame() {
         >
           https://www.oracle.com/in/construction-engineering/primavera-p6/
         </a>
-        <div className="flex w-auto">
-          <button className="bg-primary py-1 px-4 rounded-3xl font-medium    text-white mt-4">
+        <div className="flex w-auto mt-4">
+          <Button type="regular">
             {t("viewMore")}
-          </button>
+          </Button>
         </div>
       </div>
     </div>
