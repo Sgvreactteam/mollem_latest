@@ -5,43 +5,44 @@ import CashFlow from "./CashFlow";
 import TimeFrame from "./TimeFrame";
 import { useLanguage } from "../../../context/LanguageContext";
 import { useTranslation } from "react-i18next";
-import Button from "../../UI/Button";
+
+import  Button  from "../../UI/Button";
+import { useLocation } from "react-router-dom";
 function PreparationPhase() {
-  const { language, toggleLanguage } = useLanguage();
-  const [bill, setBill] = useState(true);
-  const [evaluation, setEvaluation] = useState(false);
-  const [timeframe, setTimeframe] = useState(false);
-  const [cash, setCash] = useState(false);
+
+
+  const location = useLocation();
+
+  const [selected,setSelected] = useState(0);
+
   const { t } = useTranslation();
 
-  const showBillHandler = () => {
-    setBill(true);
-    setCash(false);
-    setEvaluation(false);
-    setTimeframe(false);
-  };
+  const handleRegButtonClick = (index) => {
+    setSelected(index)
+};
+ 
 
-  const showEvaluationHandler = () => {
-    setEvaluation(true);
-    setBill(false);
-    setCash(false);
-    setTimeframe(false);
-  };
-  const showTimeHandler = () => {
-    setTimeframe(true);
-    setEvaluation(false);
-    setBill(false);
-    setCash(false);
-  };
-  const showCashHandler = () => {
-    setCash(true);
-    setTimeframe(false);
-    setEvaluation(false);
-    setBill(false);
-  };
+  const routsArray =[
+    {
+      title: "billOf",
+      to:"/preparation/Bill"
+    },
+    {
+      title: "evalCri",
+      to:"/preparation/Evalution"
+    },
+    {
+      title: "timeFrame",
+      to:"/preparation/TimeF"
+    },
+    {
+      title: "cashFlow",
+      to:"/preparation/cashFlow"
+    },
+  ]
 
   return (
-    <div className="bg-[#F2F6FE] px-8 w-full flex flex-col h-full pt-20">
+    <div className="bg-[#F2F6FE] px-8 w-full flex flex-col h-screen pt-20">
       <div className="relative">
         <div className="max-w-4xl mx-auto text-3xl font-medium text-center pb-1">
           {t("projPhases")}
@@ -52,32 +53,23 @@ function PreparationPhase() {
       <div className="flex flex-col">
         <p className="text-xl font-medium mt-4">{t("activities")}</p>
         <div className="flex flex-row gap-3 w-full flex-wrap mt-6">
-          <Button
-            onClick={showBillHandler}
-            type="regular"
-          >
-            {t("billOf")}
-          </Button>
-          <Button
-            onClick={showEvaluationHandler}
-            type="regular"          >
-            {t("evalCri")}
-          </Button>
-          <Button
-            onClick={showTimeHandler}
-            type="regular"          >
-            {t("timeFrame")}
-          </Button>
-          <Button
-            onClick={showCashHandler}
-            type="regular"          >
-            {t("cashFlow")}
-          </Button>
+
+        {
+                routsArray && routsArray.map((item,index)=>{
+                    return  <Button
+                    type={selected == index ? "regularChange" : "regular"}
+                    to={item.to}
+                    onClick={handleRegButtonClick.bind(this,index)}
+                >
+                    { t(item.title)}
+                </Button>
+                })
+              }
         </div>
-        {bill && <BillofQuantities />}
-        {evaluation && <Evaluation />}
-        {cash && <CashFlow />}
-        {timeframe && <TimeFrame />}
+                {location.pathname === '/preparation/Bill' && <BillofQuantities />}
+                {location.pathname === '/preparation/Evalution' && <Evaluation />}
+                {location.pathname === '/preparation/cashFlow' && <CashFlow />}
+                {location.pathname === '/preparation/TimeF' && <TimeFrame />}
       </div>
     </div>
   );
