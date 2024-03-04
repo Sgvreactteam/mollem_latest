@@ -4,7 +4,8 @@ import TaskList from './TaskList/TaskList';
 import DashBoard from './Dashboard/Dashboard'
 import Timeline from './Timeline/Timeline'
 import Button from '../../UI/Button';
-function Task({checkedA}) {
+
+function Task() {
 
     const { t } = useTranslation();
     const [taskSelect, setTaskSelect] = useState(0)
@@ -31,6 +32,7 @@ function Task({checkedA}) {
     <div className='bg-[#F2F6FE] h-screen pt-20 whitespace-nowrap'>
         <div className="flex justify-between ml-8 pb-8 mr-8">
         <div className="flex flex-row gap-7 ">
+
         {
                 taskRouts && taskRouts.map((item,index)=>{
                     return  <Button
@@ -42,6 +44,7 @@ function Task({checkedA}) {
                 </Button>
                 })
               }
+
         </div>
         {/* {!dashboard && <button className='bg-primary text-white py-1 px-4 rounded-2xl'>
             {t('addNewTask')}
