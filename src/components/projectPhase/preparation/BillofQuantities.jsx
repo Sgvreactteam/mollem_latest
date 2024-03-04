@@ -125,9 +125,9 @@ function BillofQuantities() {
 
       <div className="flex justify-center">
         <div className="flex flex-row gap-5 mt-16">
-          <Button onClick={handleAnalysis} type="regular">
+          {analysis === false ? <Button onClick={handleAnalysis} type="regular">
             {t("analysis")}
-          </Button>
+          </Button> : ""}
           <Button type="regular">
             {t("verify")}
           </Button>
