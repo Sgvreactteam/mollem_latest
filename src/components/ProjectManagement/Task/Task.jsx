@@ -12,8 +12,6 @@ function Task({checkedA}) {
     const handleRegButtonClick = (index) => {
       setTaskSelect(index)
     }
-
-
     const taskRouts =[
       {
         title:"dashboard",
@@ -28,7 +26,6 @@ function Task({checkedA}) {
         to:"/task/Timeline"
       },
     ]
-
 
   return (
     <div className='bg-[#F2F6FE] h-screen pt-20 whitespace-nowrap'>
