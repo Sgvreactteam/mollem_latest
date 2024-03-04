@@ -1,5 +1,3 @@
-import Login from "./components/login/Login";
-import Signup from "./components/signUp/Signup";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import UserAdmin from "./components/userAdmin/UserAdmin";
 import Header from "./components/header/Header";
@@ -20,7 +18,9 @@ import UserTask from "./components/ProjectManagement/UserTask/UserTask";
 import TaskCreate from "./components/ProjectManagement/TaskCreate/TaskCreate";
 import Task from "./components/ProjectManagement/Task/Task";
 import KnowledgeHub from "./components/KnowledgeHub/KnowledgeHub";
-import Forgot from "./components/forgot/Forgot";
+import Login from "./auth/login/Login";
+import Signup from "./auth/signUp/Signup";
+import Forgot from "./auth/forgot/Forgot";
 
 
 function App() {
@@ -33,23 +33,27 @@ function App() {
 
         {/* <HeaderProjectM /> */}
         <Routes>
-          <Route index element={<Signup />} />
+          <Route index element={<Signup/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot" element={<Forgot />} />
           <Route path="/useradmin" element={<UserAdmin />} />
           <Route path="/topiwala" element={<Topiwala />} />
-          <Route path="/knowledgeHub/reg" element={<KnowledgeHub />} />
 
+
+          <Route path="/knowledgeHub/reg" element={<KnowledgeHub />} />
           <Route path="/knowledgeHub/ep" element={<KnowledgeHub />} />
           <Route path="/knowledgeHub/template" element={<KnowledgeHub />} />
 
-          
           <Route path="/data" element={<Database />} />
+
           <Route path="/preparation/Bill" element={<PreparationPhase />} />
           <Route path="/preparation/Evalution" element={<PreparationPhase />} />
           <Route path="/preparation/cashFlow" element={<PreparationPhase />} />
           <Route path="/preparation/TimeF" element={<PreparationPhase />} />
 
+          <Route path="/task/Dashboard" element={<Task />} />
+          <Route path="/task/Tasklist" element={<Task />} />
+          <Route path="/task/Timeline" element={<Task />} />
 
           <Route path="/initiatingphase" element={<InitialPhase />} />
           <Route path="/execution" element={<Execution />} />
@@ -58,7 +62,6 @@ function App() {
           <Route path="/newProject" element={<SingleProject />} />
           <Route path="/userTask" element={<UserTask />} />
           <Route path="/taskCreate" element={<TaskCreate />} />
-          <Route path="/task" element={<Task />} />
           <Route path="/currentProject" element={<ProjectManagement />} />
           <Route path="/topiwalaPlant" element={<Topiwala />} />
         </Routes>
