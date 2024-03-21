@@ -226,6 +226,7 @@
   "indType": "Industry Type",
   "compSize": "Company Size",
   "biusDesc": "Buisness Description",
-  "emailDomain": "Email Domain"
+  "emailDomain": "Email Domain",
+  "proceed": "Proceed"
 
 }

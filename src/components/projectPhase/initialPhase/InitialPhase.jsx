@@ -6,25 +6,9 @@ import Button from "../../UI/Button";
 function InitialPhase() {
 
   const [projectName, setProjectName] = useState("Topiwala Plant");
-  const [editing, setEditing] = useState(false);
-  const [newName, setNewName] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
   const { t } = useTranslation();
-  const handleEditClick = () => {
-    setNewName(projectName);
-    setEditing(true);
-  };
 
-  const handleInputChange = (event) => {
-    setNewName(event.target.value);
-  };
-
-  const handleKeyPress = (event) => {
-    if (event.key === "Enter") {
-      setProjectName(newName);
-      setEditing(false);
-    }
-  };
 
   const handleUploadClick = () => {
     document.getElementById("fileInput").click();
@@ -43,13 +27,14 @@ function InitialPhase() {
   const removeFileInput = () => {
     setSelectedImage(null)
   }
+
   return (
     <div>
       <div className="pt-14">
         <div className="bg-[#F2F6FE] px-8 w-full h-full lg:pt-4 sm:pt-2">
           <div className="relative">
             <div className="max-w-4xl mx-auto text-3xl font-medium text-center pb-1">
-              {t('initPhases')}
+            {t("projectTitle")}
             </div>
             <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-green-600 to-transparent"></div>
           </div>

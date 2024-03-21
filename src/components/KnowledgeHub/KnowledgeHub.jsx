@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import Regulation from './regulation/Regulation';
 import EngineeringPractices from './EngineeringPractices/EngineeringPractices';
 import Templates from './template/Templates';
+import { IoMdSearch } from "react-icons/io";
 
 const KnowledgeHub = () => {
     const location = useLocation();
@@ -40,7 +41,7 @@ const KnowledgeHub = () => {
                 {t("knowledgeHub")}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-green-600 to-transparent"></div>
             </div>
-
+            <div className="flex justify-between">
             <div className="flex gap-3 min-w-[460px] ">
               {
                 arrayRoutes && arrayRoutes.map((item,index)=>{
@@ -53,6 +54,11 @@ const KnowledgeHub = () => {
                 </Button>
                 })
               }
+          </div>
+              <div className='border bg-white flex items-center text-primary mr-8 rounded-xl p-2'>
+            <IoMdSearch size={24} />
+            <input type="text" placeholder='Search' className='outline-none ml-4 placeholder:text-primary placeholder:font-thin' />
+            </div>
             </div>
 
             <div>
