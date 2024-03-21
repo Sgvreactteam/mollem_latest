@@ -154,9 +154,9 @@ function Topiwala() {
             </div>
           </div>
 
-          <div className="text-center pt-5">
-            <Button type="primary">
-            {t('verify')}
+          <div className="text-center pt-5 flex justify-center">
+            <Button to="/userAdmin" type="regular">
+            {t('proceed')}
             </Button>
           </div>
         </div>

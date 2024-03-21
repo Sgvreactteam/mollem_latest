@@ -31,15 +31,6 @@ export const dropdownList = [
             "10M"
         ]
     },
-    
-    {
-        type: "Date",
-        items:[
-            "1 Jan",
-            "10 Jan",
-            "25 Jan"
-        ]
-    },
     {
         type: "Sort by Cost/date",
         items:[

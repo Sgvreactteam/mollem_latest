@@ -511,7 +511,7 @@ function Database() {
   const [complexity, setComplexity] = useState("Complexity");
   const [category, setCategory] = useState("Category");
   const [cost, setCost] = useState("Cost");
-  const [date, setDate] = useState("Date");
+
   const [filter, setFilter] = useState("Sort by Cost/date");
  
 
@@ -528,8 +528,7 @@ function Database() {
         return complexity;
       case "Cost":
         return cost;
-      case "Date":
-        return date;
+
       case "Category":
         return category;
       case "Sort by Cost/date":
@@ -547,9 +546,7 @@ function Database() {
       case "Cost":
         setCost(value);
         break;
-      case "Date":
-        setDate(value);
-        break;
+
       case "Category":
         setCategory(value);
         break;
