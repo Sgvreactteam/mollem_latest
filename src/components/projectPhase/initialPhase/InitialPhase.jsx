@@ -32,8 +32,11 @@ function InitialPhase() {
     <div>
       <div className="pt-14">
         <div className="bg-[#F2F6FE] px-8 w-full h-full lg:pt-4 sm:pt-2">
+        <div className="max-w-4xl mx-auto text-3xl font-medium text-center pb-1">
+            {t("initiatingPhase")}
+            </div>
           <div className="relative">
-            <div className="max-w-4xl mx-auto text-3xl font-medium text-center pb-1">
+            <div className="max-w-4xl mx-auto text-2xl font-medium text-center pb-1">
             {t("projectTitle")}
             </div>
             <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-green-600 to-transparent"></div>
