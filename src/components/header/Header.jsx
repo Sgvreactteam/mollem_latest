@@ -184,7 +184,7 @@ const NestedDrawer = () => {
             
           </div>
         )}
-        <ListItemButton onClick={toggleProject}>
+        {/* <ListItemButton onClick={toggleProject}>
           <div className="flex items-center justify-between w-full">
             {isProjectOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
 
@@ -200,9 +200,9 @@ const NestedDrawer = () => {
               </ListItemIcon>
             </div>
           </div>
-        </ListItemButton>
+        </ListItemButton> */}
 
-        {isProjectOpen && (
+        {/* {isProjectOpen && (
           <div className="">
             <Link to="/preparation/Bill">
               <ListItemButton className=" !text-end !pr-10">
@@ -226,7 +226,7 @@ const NestedDrawer = () => {
               </ListItemButton>
             </Link>
           </div>
-        )}
+        )} */}
       </div>
 
       <div>
@@ -357,7 +357,7 @@ const NestedDrawer = () => {
         </div>
       </ListItemButton>
 
-      <ListItemButton>
+      {/* <ListItemButton>
         <div className="flex items-center justify-end w-full">
           <Link to="/topiwalaPlant">
             <div className="flex gap-3">
@@ -373,7 +373,7 @@ const NestedDrawer = () => {
             </div>
           </Link>
         </div>
-      </ListItemButton>
+      </ListItemButton> */}
 
       <ListItemButton>
         <div className="flex items-center justify-end w-full">
