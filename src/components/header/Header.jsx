@@ -374,6 +374,24 @@ const NestedDrawer = () => {
           </Link>
         </div>
       </ListItemButton>
+
+      <ListItemButton>
+        <div className="flex items-center justify-end w-full">
+          <Link to="/ownProjects">
+            <div className="flex gap-3">
+              <ListItemText className=" text-right" primary={t("Own Projects Dashboard")} />
+
+              <ListItemIcon className="flex items-center justify-center">
+                <img
+                  src="/Images/sidebar/Vector.png"
+                  alt="project-image"
+                  className="w-4 h-4"
+                />
+              </ListItemIcon>
+            </div>
+          </Link>
+        </div>
+      </ListItemButton>
     </div>
   );
 };

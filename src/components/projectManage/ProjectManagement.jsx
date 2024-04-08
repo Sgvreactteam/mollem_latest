@@ -9,7 +9,7 @@ import img6 from "/Images/img/img6.png";
 
 import { WiTime4 } from "react-icons/wi";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
-
+import { Navigate, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './ProjMan.css'
 import { useTranslation } from "react-i18next";
@@ -17,8 +17,10 @@ import { FormControl, MenuItem, Select } from "@mui/material";
 import { CiSearch } from "react-icons/ci";
 
 function ProjectManagement() {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const [filter, setFilter] = useState("Filter");
+  const [project, setProject] = useState("Projects")
 
   const projects = [
     {
@@ -109,6 +111,7 @@ function ProjectManagement() {
               <Select
                 variant="outlined"
                 value={filter}
+                onChange={(event) => setFilter(event.target.value)}
                 sx={{
                   borderRadius: "50px",
                   height: "40px",
@@ -117,8 +120,26 @@ function ProjectManagement() {
                 <MenuItem disabled value="Filter">
                   {t("filterr")}
                 </MenuItem>
-                <MenuItem>Completed</MenuItem>
-                <MenuItem>On progress</MenuItem>
+                <MenuItem value="Completed">Completed</MenuItem>
+                <MenuItem value = "On progress">On progress</MenuItem>
+              </Select>
+            </FormControl>
+            
+            <FormControl className="app-dropdown">
+              <Select
+                variant="outlined"
+                value={project}
+                onChange={(e) => setProject(e.target.value)}
+                sx={{
+                  borderRadius: "50px",
+                  height: "40px",
+                }}
+              >
+                <MenuItem disabled value="Projects">
+                  Projects
+                </MenuItem>
+                <MenuItem value="All Projects">All Projects</MenuItem>
+                <MenuItem value="Own Projects">Own Projects</MenuItem>
               </Select>
             </FormControl>{" "}
           </div>
@@ -175,7 +196,7 @@ function ProjectManagement() {
                 </p>
                 <progress className="sm:mt-2 mt-1" value={0.25}></progress>
                 <div className="flex justify-end  sm:mt-4 mt-2">
-                  <button className="bg-white focus:bg-primary focus:text-white flex items-center border rounded-full px-4 py-1 font-medium">
+                  <button onClick={() => navigate('/initiatingPhase')} className="bg-white focus:bg-primary focus:text-white flex items-center border rounded-full px-4 py-1 font-medium">
                     {t("viewProj")} <MdOutlineArrowRightAlt className="ms-2" />
                   </button>
                 </div>

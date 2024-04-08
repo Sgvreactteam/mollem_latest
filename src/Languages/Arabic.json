@@ -227,5 +227,10 @@
   "compSize": "حجم الشركة",
   "biusDesc": "وصف الأعمال",
   "emailDomain": "نطاق البريد الإلكتروني",
-  "proceed": "يتابع"
+  "proceed": "يتابع",
+
+  "completedProjects": "المشاريع المنجزة",
+  "incomplete": "مشاريع غير مكتملة",
+  "totalProCost": "التكلفة الإجمالية للمشروع",
+  "totalCashSpend": "إجمالي الإنفاق النقدي"
 }

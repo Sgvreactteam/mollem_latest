@@ -21,6 +21,7 @@ import KnowledgeHub from "./components/KnowledgeHub/KnowledgeHub";
 import Login from "./auth/login/Login";
 import Signup from "./auth/signUp/Signup";
 import Forgot from "./auth/forgot/Forgot";
+import OwnProjectsDashboard from "./components/OwnProjectsDashboard/OwnProjectsDashboard";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/forgot" element={<Forgot />} />
           <Route path="/useradmin" element={<UserAdmin />} />
           <Route path="/topiwala" element={<Topiwala />} />
+          <Route path="/ownProjects" element={<OwnProjectsDashboard />} />
 
 
           <Route path="/knowledgeHub/reg" element={<KnowledgeHub />} />
