@@ -62,11 +62,10 @@ function App() {
           <Route path="/execution" element={<Execution />} />
           <Route path="/close" element={<Close />} />
           <Route path="/ProjectManagement" element={<ProjectManagement />} />
-          <Route path="/newProject" element={<SingleProject />} />
+          <Route path="/newProject" element={<Topiwala />} />
           <Route path="/userTask" element={<UserTask />} />
           <Route path="/taskCreate" element={<TaskCreate />} />
           <Route path="/currentProject" element={<ProjectManagement />} />
-          <Route path="/topiwalaPlant" element={<Topiwala />} />
         </Routes>
       </I18nextProvider>
     </div>
