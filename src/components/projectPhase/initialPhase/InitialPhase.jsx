@@ -3,7 +3,10 @@ import "./phase.css";
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import Button from "../../UI/Button";
+import { useNavigate } from "react-router-dom";
 function InitialPhase() {
+
+  const navigate = useNavigate()
 
   const [projectName, setProjectName] = useState("Topiwala Plant");
   const [selectedImage, setSelectedImage] = useState(null);
@@ -43,7 +46,13 @@ function InitialPhase() {
           </div>
 
           <div className="max-w-sm mx-auto">
-            <div className="relative z-10 bg-white mt-8 flex flex-col items-center">
+            <div className="absolute right-20 flex flex-col gap-4">
+              <Button type="regular" onClick={() => navigate('/preparation/Bill')}>Preparation Phase</Button>
+              <Button type="regular" onClick={() => navigate('/initiatingphase')}>Initiating Phase</Button>
+              <Button type="regular" onClick={() => navigate('/execution')}>Execution Phase</Button>
+              <Button type="regular" onClick={() => navigate('/close')}>Close-out Phase</Button>
+            </div>
+            <div className="z-10 bg-white mt-8 flex flex-col items-center">
               <svg
                 className="absolute z-30 -top-4 -right-4"
                 xmlns="http://www.w3.org/2000/svg"

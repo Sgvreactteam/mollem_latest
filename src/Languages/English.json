@@ -227,6 +227,11 @@
   "compSize": "Company Size",
   "biusDesc": "Buisness Description",
   "emailDomain": "Email Domain",
-  "proceed": "Proceed"
+  "proceed": "Proceed",
+
+  "completedProjects": "Completed projects",
+  "incomplete": "Incomplete projects",
+  "totalProCost": "Total project cost",
+  "totalCashSpend": "Total cash spend"
 
 }

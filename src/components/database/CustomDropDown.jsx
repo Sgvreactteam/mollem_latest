@@ -1,6 +1,8 @@
 import { FormControl, MenuItem, Select } from '@mui/material'
 import React from 'react'
 import { useTranslation } from 'react-i18next';
+import { TbSortAscendingNumbers } from "react-icons/tb";
+import { TbSortDescendingNumbers } from "react-icons/tb";
 
 function CustomDropDown(props) {
     const { t } = useTranslation();

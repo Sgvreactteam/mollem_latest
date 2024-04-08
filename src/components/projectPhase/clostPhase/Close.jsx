@@ -2,9 +2,10 @@ import React from "react";
 import "./close.css";
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from "react-router-dom";
 import Button from "../../UI/Button";
 function Close() {
-
+  const navigate = useNavigate()
   const [projectName, setProjectName] = useState("Topiwala Plant");
   const [editing, setEditing] = useState(false);
   const [newName, setNewName] = useState("");
@@ -54,6 +55,12 @@ function Close() {
           </div>
 
           <div className="max-w-sm mx-auto">
+          <div className="absolute right-20 flex flex-col gap-4">
+              <Button type="regular" onClick={() => navigate('/preparation/Bill')}>Preparation Phase</Button>
+              <Button type="regular" onClick={() => navigate('/initiatingphase')}>Initiating Phase</Button>
+              <Button type="regular" onClick={() => navigate('/execution')}>Execution Phase</Button>
+              <Button type="regular" onClick={() => navigate('/close')}>Close-out Phase</Button>
+            </div>
             <div className="relative z-10 bg-white mt-8  flex flex-col items-center">
               <svg
                 className="absolute z-30 -top-4 -right-4"
