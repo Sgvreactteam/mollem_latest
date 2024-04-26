@@ -34,7 +34,7 @@ function UserAdmin() {
         <Link to={`/knowledgeHub/reg`}>
           <div className="sm:max-w-sm w-full mx-auto bg-white rounded-md shadow-md flex flex-col justify-center items-center">
             <img
-              className=" object-cover h-20 w-20"
+              className=" object-cover h-20 w-20 sepia"
               src="/Images/userAdmin/open-book.svg"
               alt="image"
             />
@@ -50,7 +50,7 @@ function UserAdmin() {
         <Link to={`/currentProject`}>
           <div className="sm:max-w-sm w-full mx-auto bg-white rounded-md overflow-hidden shadow-md flex flex-col justify-center items-center">
             <img
-              className=" object-cover h-20 w-20"
+              className=" object-cover h-20 w-20 sepia"
               src="/Images/userAdmin/Frame (1).png"
               alt="image"
             />
@@ -66,7 +66,7 @@ function UserAdmin() {
         <Link to={`/data`}>
           <div className="sm:max-w-sm w-full mx-auto bg-white rounded-md overflow-hidden shadow-md flex flex-col justify-center items-center">
             <img
-              className=" object-cover h-20 w-20"
+              className=" object-cover h-20 w-20 sepia"
               src="/Images/userAdmin/database.png"
               alt="image"
             />
