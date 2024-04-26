@@ -10,7 +10,7 @@ progress {
     border-radius: 7px;
   }
   progress::-webkit-progress-value {
-    background-color: #018b00;
+    background-color: #2353F5;
     border-radius: 7px;
   }
   progress::-moz-progress-bar {

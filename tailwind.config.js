@@ -3,11 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      inter: "Inter, sans-serif",
+      inter: "Effra, sans-serif",
     },
     extend: {
       colors: {
-        primary: "#018B00",
+        primary: "#2353F5",
         background: "#F2F6FE"
       },
       boxShadow: {

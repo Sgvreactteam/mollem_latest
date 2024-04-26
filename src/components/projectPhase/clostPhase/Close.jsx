@@ -1,11 +1,11 @@
 import React from "react";
 import "./close.css";
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Button from "../../UI/Button";
 function Close() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [projectName, setProjectName] = useState("Topiwala Plant");
   const [editing, setEditing] = useState(false);
   const [newName, setNewName] = useState("");
@@ -46,20 +46,34 @@ function Close() {
         <div className="bg-[#F2F6FE] px-8 w-full h-full lg:pt-4 sm:pt-2">
           <div className="relative">
             <div className="max-w-4xl mx-auto text-3xl font-medium text-center pb-1">
-              {t('closeOutPhase')}
+              {t("closeOutPhase")}
             </div>
             <div className="max-w-4xl mx-auto text-2xl font-medium text-center pb-1">
-              {t('projectTitle')}
+              {t("projectTitle")}
             </div>
-            <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-green-600 to-transparent"></div>
+            <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-[#2353F5] to-transparent"></div>
           </div>
 
           <div className="max-w-sm mx-auto">
-          <div className="absolute right-20 flex flex-col gap-4">
-              <Button type="regular" onClick={() => navigate('/preparation/Bill')}>Preparation Phase</Button>
-              <Button type="regular" onClick={() => navigate('/initiatingphase')}>Initiating Phase</Button>
-              <Button type="regular" onClick={() => navigate('/execution')}>Execution Phase</Button>
-              <Button type="regular" onClick={() => navigate('/close')}>Close-out Phase</Button>
+            <div className="absolute right-20 flex flex-col gap-4">
+              <Button
+                type="regular"
+                onClick={() => navigate("/preparation/Bill")}
+              >
+                Preparation Phase
+              </Button>
+              <Button
+                type="regular"
+                onClick={() => navigate("/initiatingphase")}
+              >
+                Initiating Phase
+              </Button>
+              <Button type="regular" onClick={() => navigate("/execution")}>
+                Execution Phase
+              </Button>
+              <Button type="regular" onClick={() => navigate("/close")}>
+                Close-out Phase
+              </Button>
             </div>
             <div className="relative z-10 bg-white mt-8  flex flex-col items-center">
               <svg
@@ -129,9 +143,7 @@ function Close() {
                   />
                 </div>
               )}
-              <p className="mt-4 mb-16">
-                {t('addProjectImg')}
-              </p>
+              <p className="mt-4 mb-16">{t("addProjectImg")}</p>
             </div>
           </div>
 
@@ -140,7 +152,7 @@ function Close() {
             <div className="  grid md:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-3">
               <div className="flex flex-col font-medium">
                 <label htmlFor="" className="font-medium ">
-                  {t('currentPhase')}
+                  {t("currentPhase")}
                 </label>
                 <input
                   type="text"
@@ -152,7 +164,7 @@ function Close() {
 
               <div className="flex flex-col font-medium">
                 <label htmlFor="" className=" font-medium">
-                  {t('startingDate')}
+                  {t("startingDate")}
                 </label>
                 <input
                   type="date"
@@ -164,7 +176,7 @@ function Close() {
               </div>
               <div className="flex flex-col font-medium">
                 <label htmlFor="" className=" font-medium">
-                  {t('nextMile')}
+                  {t("nextMile")}
                 </label>
                 <input
                   type="date"
@@ -175,7 +187,7 @@ function Close() {
               </div>
               <div className="flex flex-col font-medium">
                 <label htmlFor="" className=" font-medium">
-                  {t('completion%')}
+                  {t("completion%")}
                 </label>
                 <input
                   type="number"
@@ -186,7 +198,7 @@ function Close() {
               </div>
               <div className="flex flex-col font-medium">
                 <label htmlFor="" className=" font-medium">
-                  {t('cashFlow')}
+                  {t("cashFlow")}
                 </label>
                 <input
                   type="text"
@@ -197,7 +209,7 @@ function Close() {
               </div>
               <div className="flex flex-col font-medium">
                 <label htmlFor="" className=" font-medium">
-                  {t('delayDays')}
+                  {t("delayDays")}
                 </label>
                 <input
                   type="number"
@@ -210,7 +222,7 @@ function Close() {
           </div>
           <div className="pt-2">
             <div className="flex items-center">
-              <h2 className="py-3 text-2xl ">{t('activity')}</h2>
+              <h2 className="py-3 text-2xl ">{t("activity")}</h2>
               <span className="pl-2">
                 <img src="Images/Group.png" alt="image" />
               </span>
@@ -218,18 +230,12 @@ function Close() {
 
             <div className="flex md:justify-between flex-wrap">
               <div className="flex grid-cols-2 gap-3 mb-4">
-              <Button type="regular">
-                  {t('billOf')}
-                </Button>
-                <Button type="regular">
-                  {t('evalCri')}
-                </Button>
-                <Button type="regular">
-                  {t('timeFrame')}
-                </Button>
+                <Button type="regular">{t("billOf")}</Button>
+                <Button type="regular">{t("evalCri")}</Button>
+                <Button type="regular">{t("timeFrame")}</Button>
               </div>
               <Button type="regular">
-                {t('sendNote')}
+                {t("sendNote")}
                 <img
                   src="Images/Isolation_Mode.svg"
                   alt="img"
@@ -241,24 +247,16 @@ function Close() {
 
           <div className="pt-2">
             <div className="flex items-center">
-              <h2 className="py-3 text-2xl ">{t('initDoc')}</h2>
+              <h2 className="py-3 text-2xl ">{t("initDoc")}</h2>
               <span className="pl-2">
                 <img src="Images/Group.png" alt="image" />
               </span>
             </div>
             <div className="flex flex-wrap gap-3 mb-4">
-            <Button type="regular">
-                {t('projChar')}
-              </Button>
-              <Button type="regular">
-                {t('projHand')}
-              </Button>
-              <Button type="regular">
-                {t('projPlan')}
-              </Button>
-              <Button type="regular">
-                {t('projRep')}
-              </Button>
+              <Button type="regular">{t("projChar")}</Button>
+              <Button type="regular">{t("projHand")}</Button>
+              <Button type="regular">{t("projPlan")}</Button>
+              <Button type="regular">{t("projRep")}</Button>
             </div>
           </div>
         </div>

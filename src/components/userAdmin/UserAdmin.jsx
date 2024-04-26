@@ -27,7 +27,7 @@ function UserAdmin() {
     <div className="bg-[#F2F6FE] md:px-8 sm:px-5 px-3 w-full lg:h-screen h:full sm:pt-20 pt-16">
       <div className="relative max-w-4xl mx-auto lg:text-3xl md:text-2xl text-xl  font-medium text-center leading-5 pb-1">
         {t("userAdminHeading")}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-green-600 to-transparent"></div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-[#2353F5] to-transparent"></div>
       </div>
 
       <div className="flex sm:flex-row flex-col gap-4 md:gap-4 h-[calc(100%-6rem)] justify-center items-center sm:pt-0 mt-8 sm-pb-0 pb-4">
@@ -55,7 +55,7 @@ function UserAdmin() {
               alt="image"
             />
             <div className="p-2 text-center">
-              <h5 className="mb-2 text-base font-bold text-[#018B00]">
+              <h5 className="mb-2 text-base font-bold text-[#2353F5]">
                 {t("projMan")}
               </h5>
               <p className=" font-medium ">{t("loremSmall")}</p>
@@ -71,7 +71,7 @@ function UserAdmin() {
               alt="image"
             />
             <div className="p-2 text-center">
-              <h5 className="mb-2 text-base font-bold text-[#018B00]">
+              <h5 className="mb-2 text-base font-bold text-[#2353F5]">
                 {t("database")}
               </h5>
               <p className=" font-medium ">{t("loremSmall")}</p>
