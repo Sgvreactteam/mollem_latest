@@ -51,7 +51,7 @@ function Execution() {
             <div className="max-w-4xl mx-auto text-2xl font-medium text-center pb-1">
               {t('projectTitle')}
             </div>
-            <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-green-600 to-transparent"></div>
+            <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/4 h-1 bg-gradient-to-r from-white via-[#2353F5] to-transparent"></div>
           </div>
 
           <div className="max-w-sm mx-auto">

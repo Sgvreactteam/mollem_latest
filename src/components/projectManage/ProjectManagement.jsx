@@ -11,7 +11,7 @@ import { WiTime4 } from "react-icons/wi";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import './ProjMan.css'
+import "./ProjMan.css";
 import { useTranslation } from "react-i18next";
 import { FormControl, MenuItem, Select } from "@mui/material";
 import { CiSearch } from "react-icons/ci";
@@ -20,7 +20,7 @@ function ProjectManagement() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [filter, setFilter] = useState("Filter");
-  const [project, setProject] = useState("Projects")
+  const [project, setProject] = useState("Projects");
 
   const projects = [
     {
@@ -121,10 +121,9 @@ function ProjectManagement() {
                   {t("filterr")}
                 </MenuItem>
                 <MenuItem value="Completed">Completed</MenuItem>
-                <MenuItem value = "On progress">On progress</MenuItem>
+                <MenuItem value="On progress">On progress</MenuItem>
               </Select>
             </FormControl>
-            
             <FormControl className="app-dropdown">
               <Select
                 variant="outlined"
@@ -191,12 +190,15 @@ function ProjectManagement() {
                   </div>
                 </div>
                 <p className="sm:mt-2 mt-1">
-                  <span style={{ color: "#018B00" }}>{item.progress}%</span>{" "}
+                  <span style={{ color: "#2353F5" }}>{item.progress}%</span>{" "}
                   <span style={{ color: "#808080" }}>{t("completed")}</span>
                 </p>
                 <progress className="sm:mt-2 mt-1" value={0.25}></progress>
                 <div className="flex justify-end  sm:mt-4 mt-2">
-                  <button onClick={() => navigate('/initiatingPhase')} className="bg-white focus:bg-primary focus:text-white flex items-center border rounded-full px-4 py-1 font-medium">
+                  <button
+                    onClick={() => navigate("/initiatingPhase")}
+                    className="bg-white focus:bg-primary focus:text-white flex items-center border rounded-full px-4 py-1 font-medium"
+                  >
                     {t("viewProj")} <MdOutlineArrowRightAlt className="ms-2" />
                   </button>
                 </div>

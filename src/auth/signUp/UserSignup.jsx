@@ -114,9 +114,9 @@ const UserSignup = () => {
                 />
                 <span className="ml-2 font-normal text-[#808080]">
                   {t("checkBox")}{" "}
-                  <span className="text-[#018B00]">{t("termsOfUse")}</span>{" "}
+                  <span className="text-[#2353F5]">{t("termsOfUse")}</span>{" "}
                   {t("andOur")}
-                  <span className="text-[#018B00]">{t("privacyPolicy")}</span>
+                  <span className="text-[#2353F5]">{t("privacyPolicy")}</span>
                 </span>
               </label>
             </div>

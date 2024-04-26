@@ -7,7 +7,7 @@
 
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent grey background */
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     z-index: 99999999;
     height: 100%;
